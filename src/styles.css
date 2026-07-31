@@ -2501,12 +2501,25 @@ main {
   }
 
   .origin-feature-art {
-    top: auto;
-    right: 14px;
-    bottom: 14px;
-    width: min(74vw, 335px);
-    opacity: 0.38;
+    inset: 0;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
+    opacity: 0.32;
     transform: none;
+    mask-image: none;
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  .origin-feature::after {
+    background: linear-gradient(
+      90deg,
+      rgba(7, 17, 10, 0.98) 0%,
+      rgba(7, 17, 10, 0.84) 34%,
+      rgba(7, 17, 10, 0.38) 68%,
+      rgba(7, 17, 10, 0.08) 100%
+    );
   }
 
   .origin-feature > div {
