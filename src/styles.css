@@ -2501,14 +2501,17 @@ main {
   }
 
   .origin-feature-art {
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
     width: auto;
-    height: auto;
+    height: 100%;
     aspect-ratio: auto;
-    opacity: 0.32;
+    opacity: 0.42;
     transform: none;
-    mask-image: none;
-    object-fit: cover;
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.38) 34%, black 70%, black 100%);
+    object-fit: contain;
     object-position: right center;
   }
 
