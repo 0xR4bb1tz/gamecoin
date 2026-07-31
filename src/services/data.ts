@@ -40,6 +40,17 @@ const liveDataSchema = z.object({
       timestamp: z.string(),
     }),
   ),
+  notableHolders: z
+    .array(
+      z.object({
+        label: z.string(),
+        address: z.string(),
+        balanceGame: nullableNumber,
+        rewardsGme: nullableNumber,
+      }),
+    )
+    .optional()
+    .default([]),
 });
 
 export async function fetchLiveData(signal?: AbortSignal): Promise<LiveData | null> {

@@ -24,12 +24,12 @@ export function MarketTerminal({ state }: MarketTerminalProps) {
     const value = market?.[key] ?? null;
     if (key === "priceGme") {
       return value === null
-        ? "Pending"
+        ? "Syncing"
         : `${formatDecimal(value, { maximumSignificantDigits: 6 })} GME`;
     }
     if (key === "priceUsd") {
       return value === null
-        ? "Pending"
+        ? "Syncing"
         : formatDecimal(value, { style: "currency", currency: "USD", maximumSignificantDigits: 6 });
     }
     if (key === "holders" || key === "eligibleHolders") {
@@ -51,14 +51,14 @@ export function MarketTerminal({ state }: MarketTerminalProps) {
       <div className="terminal-shell hud-corners">
         <div className="terminal-topline">
           <span><i /> GAME / GME</span>
-          <span>{market ? `SYNC ${new Date(market.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : "AWAITING ROUND"}</span>
+          <span>{market ? `SYNC ${new Date(market.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : "SYNCING DATA"}</span>
         </div>
         <div className="market-grid">
           {labels.map(([label, key]) => (
             <article className="market-stat" key={key}>
               <span>{label}</span>
               <strong>{format(key)}</strong>
-              <small>{market ? "ONCHAIN / PUBLIC DATA" : "AVAILABLE AFTER LAUNCH"}</small>
+              <small>{market ? "ONCHAIN / PUBLIC DATA" : "LIVE ADAPTER SYNC"}</small>
             </article>
           ))}
         </div>
@@ -79,7 +79,7 @@ export function MarketTerminal({ state }: MarketTerminalProps) {
             </div>
           ) : (
             <StatePanel
-              kind={state.status === "loading" ? "loading" : state.status === "error" ? "error" : state.status === "empty" ? "empty" : "prelaunch"}
+              kind={state.status === "loading" ? "loading" : state.status === "error" ? "error" : "empty"}
               message={state.status === "error" ? state.error : undefined}
             />
           )}

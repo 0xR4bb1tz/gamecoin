@@ -23,7 +23,7 @@ export function Footer() {
           </span>
         </a>
         <p>
-          An independent GAME/GME community token planned for Robinhood Chain. Inspired by
+          An independent GAME/GME community token on Robinhood Chain. Inspired by
           internet market culture. Built around transparent onchain rules.
         </p>
         <div className="footer-links">
@@ -35,7 +35,7 @@ export function Footer() {
               </a>
             ))
           ) : (
-            <span>Official links pending launch</span>
+            <span>Official links syncing</span>
           )}
         </div>
       </div>

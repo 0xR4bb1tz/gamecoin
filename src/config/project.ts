@@ -1,11 +1,8 @@
 import { getAddress } from "viem";
 
-export type SiteMode = "prelaunch" | "live";
-
 type Address = `0x${string}` | "";
 
 export interface ProjectConfig {
-  mode: SiteMode;
   token: {
     name: string;
     symbol: string;
@@ -33,6 +30,10 @@ export interface ProjectConfig {
     sellTaxBps: number;
     minimumEligibleBalance: number;
     rewardAllocationBps: number;
+  };
+  media: {
+    originCampaign: string;
+    rewardCampaign: string;
   };
   socials: {
     x: string;
@@ -62,7 +63,6 @@ const gameAddress = addressEnv(env.VITE_GAME_ADDRESS);
 const poolAddress = addressEnv(env.VITE_POOL_ADDRESS);
 
 export const projectConfig: ProjectConfig = {
-  mode: env.VITE_GAMECOIN_MODE === "live" ? "live" : "prelaunch",
   token: {
     name: "GameCoin",
     symbol: "GAME",
@@ -97,6 +97,10 @@ export const projectConfig: ProjectConfig = {
     minimumEligibleBalance: numberEnv(env.VITE_MIN_ELIGIBLE_GAME, 10_000),
     rewardAllocationBps: numberEnv(env.VITE_REWARD_ALLOCATION_BPS, 10_000),
   },
+  media: {
+    originCampaign: env.VITE_ORIGIN_CAMPAIGN_IMAGE || "",
+    rewardCampaign: env.VITE_REWARD_CAMPAIGN_IMAGE || "",
+  },
   socials: {
     x: env.VITE_X_URL || "",
     telegram: env.VITE_TELEGRAM_URL || "",
@@ -104,9 +108,9 @@ export const projectConfig: ProjectConfig = {
   },
 };
 
-export const isLive =
-  projectConfig.mode === "live" &&
-  Boolean(projectConfig.token.address && projectConfig.token.poolAddress);
+export const hasLiveDataConfig = Boolean(
+  projectConfig.token.address && projectConfig.token.poolAddress,
+);
 
 export function bpsToPercent(bps: number): string {
   return `${(bps / 100).toLocaleString(undefined, { maximumFractionDigits: 2 })}%`;

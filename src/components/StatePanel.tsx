@@ -1,7 +1,7 @@
 import { Icon } from "./Icons";
 
 interface StatePanelProps {
-  kind: "prelaunch" | "loading" | "empty" | "error";
+  kind: "loading" | "empty" | "error";
   compact?: boolean;
   title?: string;
   message?: string;
@@ -9,9 +9,8 @@ interface StatePanelProps {
 
 export function StatePanel({ kind, compact = false, title, message }: StatePanelProps) {
   const defaults = {
-    prelaunch: ["Round not started", "Live onchain data becomes available after GAME launches."],
     loading: ["Syncing terminal", "Reading the latest public market and reward data."],
-    empty: ["No activity yet", "The contracts are live, but no qualifying activity is available."],
+    empty: ["Live data connection pending", "The interface is ready. Verified onchain data will populate through the public adapter."],
     error: ["Signal interrupted", "Public data is temporarily unavailable. Onchain contracts remain unaffected."],
   };
   const [defaultTitle, defaultMessage] = defaults[kind];

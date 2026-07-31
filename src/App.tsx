@@ -4,13 +4,13 @@ import { Footer } from "./components/Footer";
 import { Icon } from "./components/Icons";
 import { MarketTerminal } from "./components/MarketTerminal";
 import { Nav } from "./components/Nav";
+import { OnchainProof } from "./components/OnchainProof";
 import { RewardsVault } from "./components/RewardsVault";
 import { StatusStrip } from "./components/StatusStrip";
 import { TradeFeed } from "./components/TradeFeed";
 import {
   bpsToPercent,
   explorerTokenUrl,
-  isLive,
   projectConfig,
 } from "./config/project";
 import { useLiveData } from "./hooks/useLiveData";
@@ -47,7 +47,7 @@ function Hero() {
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-content">
         <div className="hero-badges">
-          <span><i /> {isLive ? "LIVE ROUND" : "PRELAUNCH ROUND"}</span>
+          <span><i /> LIVE ROUND</span>
           <span>{projectConfig.network.name}</span>
           <span>POWERED BY {projectConfig.launch.platform.toUpperCase()}</span>
         </div>
@@ -57,13 +57,13 @@ function Hero() {
           <span>EARN GME.</span>
         </h1>
         <p className="hero-lead">
-          A community-built GAME/GME token inspired by GameStop's 2021 Game Coin post. GAME is
-          planned to trade against tokenized GME, turning eligible trading-tax revenue into GME
-          holder rewards without staking.
+          A community-built GAME/GME token inspired by GameStop's 2021 Game Coin post. GAME
+          trades against tokenized GME, turning eligible trading-tax revenue into GME holder
+          rewards without staking.
         </p>
         <div className="hero-actions">
           <ActionLink href={projectConfig.launch.flapUrl}>
-            {isLive ? "Trade on Flap" : "Flap launch pending"}
+            Trade on Flap
             <Icon name="arrow" />
           </ActionLink>
           <ActionLink href={projectConfig.launch.dexScreenerUrl} variant="secondary">
@@ -91,10 +91,10 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-visual" aria-label="GameCoin prelaunch status">
+      <div className="hero-visual" aria-label="GameCoin live status">
         <div className="score-label">
           <span>GAME STATUS</span>
-          <strong>{isLive ? "ONLINE" : "READY?"}</strong>
+          <strong>ONLINE</strong>
         </div>
         <div className="coin-stage">
           <i className="scan-ring ring-one" />
@@ -106,7 +106,7 @@ function Hero() {
         <div className="visual-readout">
           <span>CHAIN <strong>4663</strong></span>
           <span>PAIR <strong>GAME/GME</strong></span>
-          <span>MODE <strong>{isLive ? "LIVE" : "PRE"}</strong></span>
+          <span>MODE <strong>LIVE</strong></span>
         </div>
       </div>
     </section>
@@ -169,16 +169,30 @@ function OriginStory() {
         </article>
       </div>
 
-      <div className="campaign-slots" aria-label="Future campaign artwork placeholders">
-        <article>
+      <div className="campaign-slots" aria-label="GameCoin campaign artwork">
+        <article
+          className={projectConfig.media.originCampaign ? "has-art" : ""}
+          style={
+            projectConfig.media.originCampaign
+              ? { backgroundImage: `linear-gradient(90deg, rgba(5, 8, 5, .88), rgba(5, 8, 5, .18)), url("${projectConfig.media.originCampaign}")` }
+              : undefined
+          }
+        >
           <span>CAMPAIGN ART / 16:9</span>
           <strong>POWER TO THE PLAYERS</strong>
-          <small>Replace with final launch artwork</small>
+          <small>{projectConfig.media.originCampaign ? "GAMECOIN ORIGIN" : "Artwork slot ready"}</small>
         </article>
-        <article>
+        <article
+          className={projectConfig.media.rewardCampaign ? "has-art" : ""}
+          style={
+            projectConfig.media.rewardCampaign
+              ? { backgroundImage: `linear-gradient(90deg, rgba(5, 8, 5, .88), rgba(5, 8, 5, .16)), url("${projectConfig.media.rewardCampaign}")` }
+              : undefined
+          }
+        >
           <span>REWARD ENGINE ART / 16:9</span>
           <strong>GAME IN. GME OUT.</strong>
-          <small>Replace with final rewards artwork</small>
+          <small>{projectConfig.media.rewardCampaign ? "GME REWARD ENGINE" : "Artwork slot ready"}</small>
         </article>
       </div>
     </section>
@@ -187,22 +201,22 @@ function OriginStory() {
 
 function Mechanics() {
   const steps = [
-    ["ROUND 01", "Launch against GME", "GAME is planned to launch and trade directly against tokenized GME through Flap."],
-    ["ROUND 02", "Trades create tax", `The planned buy and sell tax is ${bpsToPercent(projectConfig.economics.buyTaxBps)} per side.`],
+    ["ROUND 01", "Trade against GME", "GAME launches and trades directly against tokenized GME through Flap."],
+    ["ROUND 02", "Trades create tax", `The configured buy and sell tax is ${bpsToPercent(projectConfig.economics.buyTaxBps)} per side.`],
     ["ROUND 03", "Rewards convert", "The allocatable reward share is converted into tokenized GME by Flap's standard infrastructure."],
-    ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME are planned to qualify without staking.`],
+    ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME qualify without staking.`],
   ];
 
   return (
     <section className="section-block" id="mechanics">
       <div className="section-heading">
         <div>
-          <span className="section-index">04 / GAME LOOP</span>
+          <span className="section-index">05 / GAME LOOP</span>
           <h2>Four rounds. One clean loop.</h2>
         </div>
         <p>
-          The values shown below are {isLive ? "configured" : "planned"} and centralized for
-          an easy prelaunch-to-live switch.
+          The live launch parameters are centralized so the interface and backend always read
+          from one configuration.
         </p>
       </div>
       <div className="mechanics-grid">
@@ -215,7 +229,7 @@ function Mechanics() {
             <Icon name={index === 0 ? "gamepad" : index === 1 ? "chart" : index === 2 ? "spark" : "wallet"} size={28} />
             <h3>{title}</h3>
             <p>{copy}</p>
-            {!isLive && <small>PLANNED SETTING</small>}
+            <small>LIVE SYSTEM</small>
           </article>
         ))}
       </div>
@@ -230,7 +244,7 @@ function Mechanics() {
             denominated in tokenized GME.
           </p>
           <p>
-            Built for Robinhood Chain and planned for Flap, GAME is a community experiment - not
+            Built for Robinhood Chain and launched through Flap, GAME is a community experiment - not
             an official product of GameStop, Robinhood, Flap, or the tokenized-GME issuer.
           </p>
         </div>
@@ -258,6 +272,7 @@ export default function App() {
         <StatusStrip />
         <MarketTerminal state={dataState} />
         <RewardsVault state={dataState} />
+        <OnchainProof state={dataState} />
         <Mechanics />
         <TradeFeed state={dataState} />
         <Faq />

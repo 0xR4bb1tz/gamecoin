@@ -6,6 +6,7 @@ const links = [
   ["Origin", "#origin"],
   ["Terminal", "#terminal"],
   ["Rewards", "#rewards"],
+  ["Proof", "#proof"],
   ["FAQ", "#faq"],
 ];
 
@@ -24,7 +25,7 @@ export function Nav() {
         <img src="/gamecoin.png" alt="" />
         <span>
           <strong>GAMECOIN</strong>
-          <small>PLAYER 01 / {projectConfig.mode.toUpperCase()}</small>
+          <small>PLAYER 01 / LIVE</small>
         </span>
       </a>
 

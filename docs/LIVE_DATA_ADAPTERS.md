@@ -77,6 +77,27 @@ For a live trade feed, supply either a verified pool ABI or an indexed event sch
 - Buy or sell direction
 - GAME amount
 - GME amount
+
+### Notable holder board
+
+The `/api/live` response may include a `notableHolders` array:
+
+```json
+{
+  "notableHolders": [
+    {
+      "label": "PLAYER LABEL",
+      "address": "0x...",
+      "balanceGame": 0,
+      "rewardsGme": 0
+    }
+  ]
+}
+```
+
+Only include wallets that the project can identify and verify publicly. Do not infer an identity
+from a wallet without a reliable public source. The frontend renders an honest syncing state when
+the array is empty.
 - Wallet
 - Transaction hash
 - Block timestamp

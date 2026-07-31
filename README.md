@@ -1,6 +1,6 @@
 # GameCoin Website
 
-Production-ready prelaunch website for GameCoin, a planned GAME/GME token launch through Flap on Robinhood Chain.
+Production-ready live website for GameCoin, a GAME/GME token launched through Flap on Robinhood Chain.
 
 ## Local setup
 
@@ -36,18 +36,19 @@ Environment-specific values are documented in:
 
 Copy `.env.example` to `.env.local` for local overrides. Do not commit `.env.local`.
 
-## Switching from prelaunch to live
+## Connecting production data
 
 1. Confirm the final Flap token settings.
 2. Add the deployed GAME, GAME/GME pool, and dividend distributor addresses.
 3. Add the final Flap, DexScreener, GMGN, and social URLs.
 4. Set `VITE_SITE_URL` to the final HTTPS origin so Discord and X receive an absolute image URL.
 5. Confirm buy tax, sell tax, reward allocation, and minimum eligible balance.
-6. Change `VITE_GAMECOIN_MODE` from `prelaunch` to `live`.
+6. Connect the production backend/indexer to the typed `/api/live` response.
 7. Run all quality checks.
 8. Verify every external link against the deployed contracts before publishing.
 
-The page structure does not need to change. Prelaunch labels, disabled actions, and empty states automatically become live when valid configuration is supplied.
+The public interface is already presented in its final live state. Missing backend values use
+explicit syncing states and never fabricate market, reward, trade, or holder data.
 
 ## Required post-deployment checklist
 

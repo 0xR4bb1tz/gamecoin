@@ -1,7 +1,7 @@
 {
   "name": "GameCoin",
   "short_name": "GAME",
-  "description": "An independent GAME/GME community token planned for Robinhood Chain.",
+  "description": "An independent GAME/GME community token on Robinhood Chain.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050805",

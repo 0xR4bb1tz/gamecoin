@@ -109,6 +109,7 @@ async function liveData(request: Request): Promise<Response> {
       payouts: [],
     },
     trades: [],
+    notableHolders: [],
   });
 
   await cache.put(cacheKey, response.clone());

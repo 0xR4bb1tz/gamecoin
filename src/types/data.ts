@@ -38,10 +38,17 @@ export interface LiveData {
   market: MarketSnapshot;
   rewards: RewardSnapshot;
   trades: Trade[];
+  notableHolders: NotableHolder[];
+}
+
+export interface NotableHolder {
+  label: string;
+  address: string;
+  balanceGame: number | null;
+  rewardsGme: number | null;
 }
 
 export type DataState =
-  | { status: "prelaunch"; data: null; error: null }
   | { status: "loading"; data: null; error: null }
   | { status: "ready"; data: LiveData; error: null }
   | { status: "empty"; data: null; error: null }

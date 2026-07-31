@@ -11,10 +11,10 @@ export function TradeFeed({ state }: { state: DataState }) {
     <section className="section-block" id="trades">
       <div className="section-heading compact-heading">
         <div>
-          <span className="section-index">05 / LIVE MATCH</span>
+          <span className="section-index">06 / LIVE MATCH</span>
           <h2>Recent trades</h2>
         </div>
-        <p>Verified GAME/GME activity will populate here after the final pool adapter is enabled.</p>
+        <p>Verified GAME/GME activity, indexed from the live pool and linked to the explorer.</p>
       </div>
 
       <div className="trade-feed">
@@ -36,7 +36,7 @@ export function TradeFeed({ state }: { state: DataState }) {
                   ? `${formatDecimal(trade.valueGme, { maximumFractionDigits: 4 })} GME`
                   : trade.valueUsd !== null
                     ? formatDecimal(trade.valueUsd, { style: "currency", currency: "USD" })
-                    : "Pending"}
+                    : "Syncing"}
               </span>
               <span>{shortAddress(trade.wallet)}</span>
               <span>{relativeTime(trade.timestamp)}</span>
@@ -45,7 +45,7 @@ export function TradeFeed({ state }: { state: DataState }) {
           ))
         ) : (
           <StatePanel
-            kind={state.status === "loading" ? "loading" : state.status === "error" ? "error" : state.status === "ready" ? "empty" : "prelaunch"}
+            kind={state.status === "loading" ? "loading" : state.status === "error" ? "error" : "empty"}
             compact
           />
         )}

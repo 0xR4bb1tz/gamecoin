@@ -10,7 +10,7 @@ interface RewardsVaultProps {
 
 const flow = [
   ["01", "GAME trades", "Buys and sells occur against tokenized GME."],
-  ["02", "Tax accrues", "The configured token tax is collected by Flap’s V6 infrastructure."],
+  ["02", "Tax accrues", "The configured token tax is collected by Flap's V6 infrastructure."],
   ["03", "Converted to GME", "The allocatable reward share is converted into tokenized GME."],
   ["04", "Players receive", "Eligible GAME holders receive rewards without staking."],
 ];
@@ -26,7 +26,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
           <h2>GME Rewards Vault</h2>
         </div>
         <p>
-          The public-facing scoreboard for Flap’s standard dividend distributor—not a separate
+          The public scoreboard for Flap's standard dividend distributor - not a separate
           custom custody or staking contract.
         </p>
       </div>
@@ -39,10 +39,10 @@ export function RewardsVault({ state }: RewardsVaultProps) {
             <img src="/gamecoin.png" alt="" />
           </div>
           <div className="vault-copy">
-            <span className="live-chip"><i /> {rewards ? "VAULT ONLINE" : "VAULT PENDING"}</span>
+            <span className="live-chip"><i /> {rewards ? "VAULT ONLINE" : "VAULT SYNCING"}</span>
             <h3>GME enters.<br />Players level up.</h3>
             <p>
-              Planned allocation: <strong>{bpsToPercent(projectConfig.economics.rewardAllocationBps)}</strong> of
+              Reward allocation: <strong>{bpsToPercent(projectConfig.economics.rewardAllocationBps)}</strong> of
               allocatable post-protocol token-tax revenue is directed toward holder rewards.
             </p>
           </div>
@@ -100,7 +100,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
             ))}
           </div>
         ) : (
-          <StatePanel kind={state.status === "loading" ? "loading" : state.status === "error" ? "error" : state.status === "ready" ? "empty" : "prelaunch"} compact />
+          <StatePanel kind={state.status === "loading" ? "loading" : state.status === "error" ? "error" : "empty"} compact />
         )}
       </div>
     </section>

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { bpsToPercent, isLive, projectConfig } from "../config/project";
+import { bpsToPercent, projectConfig } from "../config/project";
 
 const questions = [
   {
     question: "What is GameCoin?",
     answer:
-      "GameCoin is an independent community token planned for Robinhood Chain. It takes its name and cultural starting point from GameStop's historical Game Coin promotion, then applies that idea to an onchain GAME/GME market and holder-reward loop.",
+      "GameCoin is an independent community token on Robinhood Chain. It takes its name and cultural starting point from GameStop's historical Game Coin promotion, then applies that idea to an onchain GAME/GME market and holder-reward loop.",
   },
   {
     question: "Is this an official GameStop token?",
@@ -25,21 +25,19 @@ const questions = [
   {
     question: "Is staking required?",
     answer:
-      "No staking is planned. Eligibility is based on holding the configured minimum GAME balance, subject to the final launch settings and Flap contract behavior.",
+      "No staking is required. Eligibility is based on holding the configured minimum GAME balance, subject to the deployed Flap contract behavior.",
   },
   {
     question: "What balance is required to qualify?",
-    answer: `${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME is the ${
-      isLive ? "configured" : "tentative"
-    } minimum eligible balance.`,
+    answer: `${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME is the configured minimum eligible balance.`,
   },
   {
     question: "What are the buy and sell taxes?",
-    answer: `The ${isLive ? "configured" : "tentative"} buy tax is ${bpsToPercent(
+    answer: `The configured buy tax is ${bpsToPercent(
       projectConfig.economics.buyTaxBps,
-    )}, and the ${isLive ? "configured" : "tentative"} sell tax is ${bpsToPercent(
+    )}, and the configured sell tax is ${bpsToPercent(
       projectConfig.economics.sellTaxBps,
-    )}. These values may change before launch.`,
+    )}. Verify the deployed contract before trading.`,
   },
   {
     question: "How frequently are rewards paid?",
@@ -48,9 +46,8 @@ const questions = [
   },
   {
     question: "Where can GAME be traded?",
-    answer: isLive
-      ? "GAME is configured to trade on Flap against tokenized GME. Always verify the contract address before trading."
-      : "GAME is planned to launch on Flap against tokenized GME. The official trading link will activate here after deployment.",
+    answer:
+      "GAME trades on Flap against tokenized GME. Always enter through an official link and verify the GAME contract address before trading.",
   },
   {
     question: "What are the risks?",
@@ -66,10 +63,10 @@ export function Faq() {
     <section className="section-block" id="faq">
       <div className="section-heading">
         <div>
-          <span className="section-index">06 / HELP MENU</span>
+          <span className="section-index">07 / HELP MENU</span>
           <h2>Player guide</h2>
         </div>
-        <p>Straight answers about the origin, planned launch, reward system, and risks.</p>
+        <p>Straight answers about the origin, live market, reward system, and risks.</p>
       </div>
       <div className="faq-list">
         {questions.map((item, index) => {
