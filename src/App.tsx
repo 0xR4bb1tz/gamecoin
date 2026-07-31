@@ -7,6 +7,7 @@ import { Nav } from "./components/Nav";
 import { OnchainProof } from "./components/OnchainProof";
 import { RewardsVault } from "./components/RewardsVault";
 import { StatusStrip } from "./components/StatusStrip";
+import { Tokenomics } from "./components/Tokenomics";
 import { TradeFeed } from "./components/TradeFeed";
 import {
   bpsToPercent,
@@ -44,6 +45,12 @@ function Hero() {
 
   return (
     <section className="hero" id="top">
+      <img
+        className="hero-backdrop-art"
+        src="/assets/backdrop banner.png"
+        alt=""
+        aria-hidden="true"
+      />
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-content">
         <div className="hero-badges">
@@ -129,6 +136,11 @@ function OriginStory() {
 
       <div className="origin-grid">
         <article className="origin-story hud-corners">
+          <img
+            className="origin-proof-image"
+            src="/assets/tweet proof side vertical banner.png"
+            alt="Archived GameStop Game Coin promotional post"
+          />
           <span className="origin-year">2021</span>
           <p className="origin-eyebrow">GAMESTOP / GAME COIN</p>
           <h3>The original signal.</h3>
@@ -162,8 +174,8 @@ function OriginStory() {
           <h3>The onchain continuation.</h3>
           <p>
             GameCoin follows the narrative formula with transparent contracts: launch through
-            Flap, trade against tokenized GME, and route the configured dividend share back to
-            eligible GAME holders as GME.
+            Flap, trade against tokenized GME, and route the configured dividend share directly
+            to eligible GAME holders in GME.
           </p>
           <span className="independent-label">INDEPENDENT COMMUNITY PROJECT</span>
         </article>
@@ -203,7 +215,7 @@ function Mechanics() {
   const steps = [
     ["ROUND 01", "Trade against GME", "GAME launches and trades directly against tokenized GME through Flap."],
     ["ROUND 02", "Trades create tax", `The configured buy and sell tax is ${bpsToPercent(projectConfig.economics.buyTaxBps)} per side.`],
-    ["ROUND 03", "Rewards convert", "The allocatable reward share is converted into tokenized GME by Flap's standard infrastructure."],
+    ["ROUND 03", "GME routes directly", "Because GME is both quote and dividend token, the reward share needs no token swap."],
     ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME qualify without staking.`],
   ];
 
@@ -211,7 +223,7 @@ function Mechanics() {
     <section className="section-block" id="mechanics">
       <div className="section-heading">
         <div>
-          <span className="section-index">05 / GAME LOOP</span>
+          <span className="section-index">06 / GAME LOOP</span>
           <h2>Four rounds. One clean loop.</h2>
         </div>
         <p>
@@ -255,6 +267,29 @@ function Mechanics() {
           <div><span>ARENA</span><strong>RHC</strong></div>
         </div>
       </div>
+
+      <div className="culture-strip">
+        <article>
+          <img src="/assets/roaring kitty i like the stock banner.png" alt="Stylized I like the stock community artwork" />
+          <div><span>COMMUNITY SIGNAL</span><strong>I LIKE THE STOCK</strong></div>
+        </article>
+        <article>
+          <img src="/assets/robinhoodchaincoin banner.png" alt="Stylized Robinhood Chain coin" />
+          <div><span>THE ARENA</span><strong>ROBINHOOD CHAIN</strong></div>
+        </article>
+        <article>
+          <img src="/assets/flap reference banner flap logo against a backdrop.png" alt="Stylized Flap logo coin" />
+          <div><span>THE ENGINE</span><strong>FLAP</strong></div>
+        </article>
+        <article>
+          <img src="/assets/vlad tenev banner.png" alt="Stylized editorial portrait of Vlad Tenev" />
+          <div><span>CHAIN ERA</span><strong>ONCHAIN MARKETS</strong></div>
+        </article>
+      </div>
+      <p className="culture-disclaimer">
+        Editorial and cultural references only. No person or company shown is affiliated with,
+        sponsoring, or endorsing GameCoin.
+      </p>
     </section>
   );
 }
@@ -272,6 +307,7 @@ export default function App() {
         <StatusStrip />
         <MarketTerminal state={dataState} />
         <RewardsVault state={dataState} />
+        <Tokenomics />
         <OnchainProof state={dataState} />
         <Mechanics />
         <TradeFeed state={dataState} />

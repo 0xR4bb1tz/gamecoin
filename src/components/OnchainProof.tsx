@@ -30,9 +30,9 @@ const contracts = [
   },
   {
     label: "Dividend distributor",
-    address: projectConfig.token.rewardsVaultAddress,
-    href: projectConfig.token.rewardsVaultAddress
-      ? explorerAddressUrl(projectConfig.token.rewardsVaultAddress)
+    address: projectConfig.token.dividendDistributorAddress,
+    href: projectConfig.token.dividendDistributorAddress
+      ? explorerAddressUrl(projectConfig.token.dividendDistributorAddress)
       : "",
   },
 ];
@@ -44,7 +44,7 @@ export function OnchainProof({ state }: { state: DataState }) {
     <section className="section-block proof-section" id="proof">
       <div className="section-heading">
         <div>
-          <span className="section-index">04 / ONCHAIN PROOF</span>
+          <span className="section-index">05 / ONCHAIN PROOF</span>
           <h2>Verify the game.</h2>
         </div>
         <p>

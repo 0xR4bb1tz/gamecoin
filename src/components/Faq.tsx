@@ -20,7 +20,7 @@ const questions = [
   {
     question: "How do GME rewards work?",
     answer:
-      "Flap's standard V6 tax-token system collects the configured token tax. After protocol handling, the allocatable reward share is converted into tokenized GME and processed by the standard dividend distributor.",
+      "Flap's standard V6 tax-token system collects the configured tax in GME. Because GME is both the quote token and dividend token, the holder allocation can enter the standard dividend distributor directly without a reward-token swap or custom vault.",
   },
   {
     question: "Is staking required?",
@@ -38,6 +38,11 @@ const questions = [
     )}, and the configured sell tax is ${bpsToPercent(
       projectConfig.economics.sellTaxBps,
     )}. Verify the deployed contract before trading.`,
+  },
+  {
+    question: "Where does the trading tax go?",
+    answer:
+      "The fee allocation is 100% GME holder rewards, with 0% marketing or treasury, 0% burns, 0% additional liquidity, and 0% creator commission. GME is both the quote token and dividend token.",
   },
   {
     question: "How frequently are rewards paid?",
@@ -63,7 +68,7 @@ export function Faq() {
     <section className="section-block" id="faq">
       <div className="section-heading">
         <div>
-          <span className="section-index">07 / HELP MENU</span>
+          <span className="section-index">08 / HELP MENU</span>
           <h2>Player guide</h2>
         </div>
         <p>Straight answers about the origin, live market, reward system, and risks.</p>

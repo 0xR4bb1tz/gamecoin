@@ -1,30 +1,37 @@
-# GameCoin Image Checklist
+# GameCoin Image Map
 
-The layout is complete without these files. Add them when final campaign artwork is ready and
-set their public URLs in the matching environment variables.
+All currently required production image slots are filled.
 
-## 1. Origin campaign artwork
+## Active artwork
 
-- Environment variable: `VITE_ORIGIN_CAMPAIGN_IMAGE`
-- Recommended filename: `public/media/gamecoin-origin.webp`
-- Canvas: `1600x900` (16:9)
-- Safe text area: left 45% should remain low-detail because website copy overlays that region
-- Subject direction: coin/controller or 2021 internet-market visual language
-- Avoid: GameStop trademarks, store logos, or anything implying official endorsement
+| Asset | Placement |
+| --- | --- |
+| `backdrop banner.png` | Hero atmospheric backdrop |
+| `tweet proof side vertical banner.png` | 2021 Game Coin origin proof |
+| `gamecoin name and logo on a skyscraper epic.png` | Origin campaign panel |
+| `gme stock rocket with candlesticks under it.png` | Reward campaign and direct-GME tokenomics panel |
+| `roaring kitty i like the stock banner.png` | Community-signal editorial card |
+| `robinhoodchaincoin banner.png` | Robinhood Chain editorial card |
+| `flap reference banner flap logo against a backdrop.png` | Flap infrastructure editorial card |
+| `vlad tenev banner.png` | Onchain-markets editorial card |
 
-## 2. GME reward-engine artwork
+The editorial strip includes an explicit no-affiliation/no-endorsement disclaimer.
 
-- Environment variable: `VITE_REWARD_CAMPAIGN_IMAGE`
-- Recommended filename: `public/media/gamecoin-rewards.webp`
-- Canvas: `1600x900` (16:9)
-- Safe text area: left 45% should remain low-detail
-- Subject direction: GAME flowing through an onchain system and emerging as GME rewards
-- Avoid: fake dashboards, fake balances, or promised returns
-
-## Existing production assets
+## Existing brand assets
 
 - `public/gamecoin.png`: primary square logo
 - `public/favicon.ico`: generated browser favicon
 - `public/gamecoin-og.png`: `1200x630` Discord/X/Open Graph card
 
-Use WebP for campaign artwork where possible and keep each file below 350 KB after export.
+## Optional future upgrades
+
+No additional image is required. If desired, the two campaign panels can later be replaced with
+dedicated `1600x900` WebP artwork through:
+
+```env
+VITE_ORIGIN_CAMPAIGN_IMAGE=
+VITE_REWARD_CAMPAIGN_IMAGE=
+```
+
+Keep optional replacements below 350 KB each and leave the left 45% relatively low-detail because
+the website overlays copy in that region.

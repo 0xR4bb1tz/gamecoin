@@ -10,7 +10,7 @@ export interface ProjectConfig {
     quoteSymbol: string;
     quoteAddress: `0x${string}`;
     poolAddress: Address;
-    rewardsVaultAddress: Address;
+    dividendDistributorAddress: Address;
   };
   network: {
     name: string;
@@ -26,10 +26,15 @@ export interface ProjectConfig {
     originPostUrl: string;
   };
   economics: {
+    totalSupply: number;
     buyTaxBps: number;
     sellTaxBps: number;
     minimumEligibleBalance: number;
     rewardAllocationBps: number;
+    marketingBps: number;
+    deflationBps: number;
+    liquidityBps: number;
+    commissionBps: number;
   };
   media: {
     originCampaign: string;
@@ -72,7 +77,7 @@ export const projectConfig: ProjectConfig = {
       addressEnv(env.VITE_GME_ADDRESS) ||
       "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
     poolAddress,
-    rewardsVaultAddress: addressEnv(env.VITE_REWARDS_VAULT_ADDRESS),
+    dividendDistributorAddress: addressEnv(env.VITE_DIVIDEND_DISTRIBUTOR_ADDRESS),
   },
   network: {
     name: "Robinhood Chain",
@@ -92,14 +97,23 @@ export const projectConfig: ProjectConfig = {
       "https://x.com/gamestop/status/1405605194029801473?s=20",
   },
   economics: {
+    totalSupply: numberEnv(env.VITE_TOTAL_SUPPLY, 1_000_000_000),
     buyTaxBps: numberEnv(env.VITE_BUY_TAX_BPS, 300),
     sellTaxBps: numberEnv(env.VITE_SELL_TAX_BPS, 300),
     minimumEligibleBalance: numberEnv(env.VITE_MIN_ELIGIBLE_GAME, 10_000),
     rewardAllocationBps: numberEnv(env.VITE_REWARD_ALLOCATION_BPS, 10_000),
+    marketingBps: numberEnv(env.VITE_MARKETING_BPS, 0),
+    deflationBps: numberEnv(env.VITE_DEFLATION_BPS, 0),
+    liquidityBps: numberEnv(env.VITE_LP_BPS, 0),
+    commissionBps: numberEnv(env.VITE_COMMISSION_BPS, 0),
   },
   media: {
-    originCampaign: env.VITE_ORIGIN_CAMPAIGN_IMAGE || "",
-    rewardCampaign: env.VITE_REWARD_CAMPAIGN_IMAGE || "",
+    originCampaign:
+      env.VITE_ORIGIN_CAMPAIGN_IMAGE ||
+      "/assets/gamecoin name and logo on a skyscraper epic.png",
+    rewardCampaign:
+      env.VITE_REWARD_CAMPAIGN_IMAGE ||
+      "/assets/gme stock rocket with candlesticks under it.png",
   },
   socials: {
     x: env.VITE_X_URL || "",

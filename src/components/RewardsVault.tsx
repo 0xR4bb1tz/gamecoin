@@ -11,7 +11,7 @@ interface RewardsVaultProps {
 const flow = [
   ["01", "GAME trades", "Buys and sells occur against tokenized GME."],
   ["02", "Tax accrues", "The configured token tax is collected by Flap's V6 infrastructure."],
-  ["03", "Converted to GME", "The allocatable reward share is converted into tokenized GME."],
+  ["03", "GME routes directly", "The quote token is already the dividend token, so no swap is needed."],
   ["04", "Players receive", "Eligible GAME holders receive rewards without staking."],
 ];
 
@@ -23,7 +23,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
       <div className="section-heading">
         <div>
           <span className="section-index">03 / REWARD DROP</span>
-          <h2>GME Rewards Vault</h2>
+          <h2>GME Rewards Distributor</h2>
         </div>
         <p>
           The public scoreboard for Flap's standard dividend distributor - not a separate
@@ -43,7 +43,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
             <h3>GME enters.<br />Players level up.</h3>
             <p>
               Reward allocation: <strong>{bpsToPercent(projectConfig.economics.rewardAllocationBps)}</strong> of
-              allocatable post-protocol token-tax revenue is directed toward holder rewards.
+              allocatable trading-tax revenue is deposited for eligible GAME holders in GME.
             </p>
           </div>
         </div>

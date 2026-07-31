@@ -19,7 +19,7 @@ export function StatusStrip() {
     { label: "GAME contract", address: projectConfig.token.address, token: true },
     { label: "GME contract", address: projectConfig.token.quoteAddress, token: true },
     { label: "GAME / GME pool", address: projectConfig.token.poolAddress },
-    { label: "GME Rewards Vault", address: projectConfig.token.rewardsVaultAddress },
+    { label: "GME dividend distributor", address: projectConfig.token.dividendDistributorAddress },
   ];
 
   const copy = async (address: string) => {

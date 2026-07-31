@@ -41,7 +41,7 @@ Expected reads:
 - `totalSupply() -> uint256`
 - `balanceOf(address) -> uint256`
 
-### Dividend distributor / GME Rewards Vault
+### GME dividend distributor
 
 Expected capabilities depend on Flap V6’s deployed distributor:
 

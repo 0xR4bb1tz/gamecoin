@@ -36,6 +36,9 @@ Environment-specific values are documented in:
 
 Copy `.env.example` to `.env.local` for local overrides. Do not commit `.env.local`.
 
+The canonical fee distribution and deployed-parameter checklist are documented in
+`docs/TOKENOMICS.md`.
+
 ## Connecting production data
 
 1. Confirm the final Flap token settings.
@@ -54,7 +57,7 @@ explicit syncing states and never fabricate market, reward, trade, or holder dat
 
 - [ ] GAME contract address
 - [ ] GAME/GME pool address
-- [ ] Flap dividend distributor address, branded publicly as the GME Rewards Vault
+- [ ] Flap dividend distributor address
 - [ ] Final Flap token page
 - [ ] Final DexScreener direct pair URL
 - [ ] Final GMGN Robinhood token URL

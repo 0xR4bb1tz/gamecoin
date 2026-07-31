@@ -6,6 +6,7 @@ const links = [
   ["Origin", "#origin"],
   ["Terminal", "#terminal"],
   ["Rewards", "#rewards"],
+  ["Tokenomics", "#tokenomics"],
   ["Proof", "#proof"],
   ["FAQ", "#faq"],
 ];
