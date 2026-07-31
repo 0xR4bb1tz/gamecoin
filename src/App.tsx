@@ -180,6 +180,25 @@ function OriginStory() {
         </article>
       </div>
 
+      <div className="origin-feature saga-feature">
+        <img
+          className="origin-feature-art"
+          src="/assets/vlad tenev banner.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div>
+          <span>THE GAMESTOP SAGA / JANUARY 2021</span>
+          <h3>The squeeze put retail<br />at the center of the market.</h3>
+          <p>
+            GameStop became the defining retail-market story of 2021. As volatility accelerated,
+            Robinhood restricted purchases of several heavily traded stocks, placing CEO Vlad Tenev
+            at the center of a public debate about market access, clearing, and the power of online
+            communities.
+          </p>
+        </div>
+      </div>
+
       <div className="origin-feature">
         <img
           className="origin-feature-art"
