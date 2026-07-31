@@ -723,7 +723,10 @@ main {
 
 .market-stat strong {
   margin: auto 0 10px;
-  overflow-wrap: anywhere;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font: 600 clamp(17px, 1.5vw, 24px)/1.05 var(--display);
 }
 
@@ -980,7 +983,9 @@ main {
 
 .reward-scoreboard strong {
   margin-top: 14px;
-  overflow-wrap: anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font: 600 clamp(22px, 2.2vw, 34px)/1 var(--display);
 }
 
@@ -1787,7 +1792,9 @@ main {
 
 .tokenomics-stats strong {
   margin-top: 13px;
-  overflow-wrap: anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font: 600 clamp(18px, 1.65vw, 26px)/1.05 var(--display);
 }
 
@@ -2103,15 +2110,20 @@ main {
   }
 
   .technical-strip {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
-  .technical-strip article:nth-child(5) {
+  .technical-strip article + article {
+    border-top: 1px solid var(--line);
     border-left: 0;
   }
 
-  .technical-strip article:nth-child(n + 5) {
-    border-top: 1px solid var(--line);
+  .technical-strip article:last-child {
+    grid-column: auto;
+  }
+
+  .technical-strip article:last-child {
+    grid-column: 1 / -1;
   }
 
   .site-header {
@@ -2184,6 +2196,7 @@ main {
 @media (max-width: 900px) {
   .tokenomics-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
   }
 
   .tokenomics-stats article:nth-child(3) {
@@ -2273,6 +2286,10 @@ main {
 
   .market-stat:nth-child(n + 3) {
     border-top: 1px solid var(--line);
+  }
+
+  .market-stat:last-child {
+    grid-column: 1 / -1;
   }
 
   .vault-display {
@@ -2683,8 +2700,7 @@ main {
 
   .tokenomics-stats article + article,
   .tokenomics-stats article:nth-child(3),
-  .technical-strip article + article,
-  .technical-strip article:nth-child(odd) {
+  .technical-strip article + article {
     border-top: 1px solid var(--line);
     border-left: 0;
   }
@@ -2728,6 +2744,33 @@ main {
 
   .identity-score div + div {
     border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 520px) {
+  .visual-readout {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-readout span {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 4px;
+    text-align: left;
+  }
+
+  .visual-readout span + span {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .visual-readout strong {
+    min-width: 0;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
