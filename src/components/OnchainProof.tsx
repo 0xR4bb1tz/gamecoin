@@ -10,7 +10,7 @@ import { StatePanel } from "./StatePanel";
 
 const contracts = [
   {
-    label: "GAME token",
+    label: "GAMECOIN token",
     address: projectConfig.token.address,
     href: projectConfig.token.address
       ? explorerTokenUrl(projectConfig.token.address)
@@ -22,7 +22,7 @@ const contracts = [
     href: explorerTokenUrl(projectConfig.token.quoteAddress),
   },
   {
-    label: "GAME / GME pool",
+    label: "GAMECOIN / GME pool",
     address: projectConfig.token.poolAddress,
     href: projectConfig.token.poolAddress
       ? explorerAddressUrl(projectConfig.token.poolAddress)
@@ -58,7 +58,7 @@ export function OnchainProof({ state }: { state: DataState }) {
           <div className="panel-title">
             <div>
               <span>VERIFIED CONTRACTS</span>
-              <strong>GAME system addresses</strong>
+              <strong>GAMECOIN system addresses</strong>
             </div>
             <span className="status-text">CHAIN {projectConfig.network.chainId}</span>
           </div>
@@ -102,8 +102,8 @@ export function OnchainProof({ state }: { state: DataState }) {
                     <small>{shortAddress(holder.address, 6)}</small>
                   </div>
                   <div>
-                    <span>GAME BALANCE</span>
-                    <strong>{formatCompact(holder.balanceGame, "", " GAME")}</strong>
+                    <span>GAMECOIN BALANCE</span>
+                    <strong>{formatCompact(holder.balanceGamecoin, "", " GAMECOIN")}</strong>
                   </div>
                   <div>
                     <span>GME RECEIVED</span>

@@ -27,7 +27,7 @@ export interface RewardPayout {
 export interface Trade {
   hash: string;
   side: "buy" | "sell";
-  gameAmount: number;
+  gamecoinAmount: number;
   valueGme: number | null;
   valueUsd: number | null;
   wallet: string;
@@ -44,7 +44,7 @@ export interface LiveData {
 export interface NotableHolder {
   label: string;
   address: string;
-  balanceGame: number | null;
+  balanceGamecoin: number | null;
   rewardsGme: number | null;
 }
 

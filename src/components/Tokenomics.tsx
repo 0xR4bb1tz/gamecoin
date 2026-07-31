@@ -38,8 +38,8 @@ export function Tokenomics() {
           <div className="tokenomics-stats">
             <article>
               <span>TOTAL SUPPLY</span>
-              <strong>{formatCompact(projectConfig.economics.totalSupply, "", " GAME")}</strong>
-              <small>{projectConfig.economics.totalSupply.toLocaleString()} GAME</small>
+              <strong>{formatCompact(projectConfig.economics.totalSupply, "", " GAMECOIN")}</strong>
+              <small>{projectConfig.economics.totalSupply.toLocaleString()} GAMECOIN</small>
             </article>
             <article>
               <span>BUY TAX</span>
@@ -51,7 +51,7 @@ export function Tokenomics() {
             </article>
             <article>
               <span>MINIMUM ELIGIBLE</span>
-              <strong>{formatCompact(projectConfig.economics.minimumEligibleBalance, "", " GAME")}</strong>
+              <strong>{formatCompact(projectConfig.economics.minimumEligibleBalance, "", " GAMECOIN")}</strong>
             </article>
           </div>
 
@@ -88,11 +88,11 @@ export function Tokenomics() {
             <span className="live-chip"><i /> DIRECT GME PATH</span>
             <h3>No swap layer.<br />No custom vault.</h3>
             <p>
-              GAME trades settle against GME. The dividend share is already denominated in GME,
+              GAMECOIN trades settle against GME. The dividend share is already denominated in GME,
               so eligible fees can enter Flap's standard distributor directly.
             </p>
             <div className="direct-flow" aria-label="Direct reward path">
-              <span>GAME / GME TRADE</span>
+              <span>GAMECOIN / GME TRADE</span>
               <i>→</i>
               <span>GME TAX</span>
               <i>→</i>

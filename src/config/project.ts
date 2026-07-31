@@ -64,13 +64,13 @@ function addressEnv(value: string | undefined): Address {
   }
 }
 
-const gameAddress = addressEnv(env.VITE_GAME_ADDRESS);
+const gameAddress = addressEnv(env.VITE_GAMECOIN_ADDRESS || env.VITE_GAME_ADDRESS);
 const poolAddress = addressEnv(env.VITE_POOL_ADDRESS);
 
 export const projectConfig: ProjectConfig = {
   token: {
     name: "GameCoin",
-    symbol: "GAME",
+    symbol: "GAMECOIN",
     address: gameAddress,
     quoteSymbol: "GME",
     quoteAddress:
@@ -100,7 +100,10 @@ export const projectConfig: ProjectConfig = {
     totalSupply: numberEnv(env.VITE_TOTAL_SUPPLY, 1_000_000_000),
     buyTaxBps: numberEnv(env.VITE_BUY_TAX_BPS, 300),
     sellTaxBps: numberEnv(env.VITE_SELL_TAX_BPS, 300),
-    minimumEligibleBalance: numberEnv(env.VITE_MIN_ELIGIBLE_GAME, 10_000),
+    minimumEligibleBalance: numberEnv(
+      env.VITE_MIN_ELIGIBLE_GAMECOIN ?? env.VITE_MIN_ELIGIBLE_GAME,
+      10_000,
+    ),
     rewardAllocationBps: numberEnv(env.VITE_REWARD_ALLOCATION_BPS, 10_000),
     marketingBps: numberEnv(env.VITE_MARKETING_BPS, 0),
     deflationBps: numberEnv(env.VITE_DEFLATION_BPS, 0),

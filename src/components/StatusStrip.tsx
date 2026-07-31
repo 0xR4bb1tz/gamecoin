@@ -16,9 +16,9 @@ interface ContractItem {
 export function StatusStrip() {
   const [copied, setCopied] = useState("");
   const items: ContractItem[] = [
-    { label: "GAME contract", address: projectConfig.token.address, token: true },
+    { label: "GAMECOIN contract", address: projectConfig.token.address, token: true },
     { label: "GME contract", address: projectConfig.token.quoteAddress, token: true },
-    { label: "GAME / GME pool", address: projectConfig.token.poolAddress },
+    { label: "GAMECOIN / GME pool", address: projectConfig.token.poolAddress },
     { label: "GME dividend distributor", address: projectConfig.token.dividendDistributorAddress },
   ];
 

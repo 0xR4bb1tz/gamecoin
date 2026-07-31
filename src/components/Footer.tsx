@@ -23,7 +23,7 @@ export function Footer() {
           </span>
         </a>
         <p>
-          An independent GAME/GME community token on Robinhood Chain. Inspired by
+          An independent GAMECOIN/GME community token on Robinhood Chain. Inspired by
           internet market culture. Built around transparent onchain rules.
         </p>
         <div className="footer-links">
@@ -42,7 +42,7 @@ export function Footer() {
       <div className="risk-disclosure">
         <strong>RISK NOTICE</strong>
         <p>
-          GAME is an experimental crypto token. Tokenized GME is an onchain tokenized-stock
+          GAMECOIN is an experimental crypto token. Tokenized GME is an onchain tokenized-stock
           product and is not the same as direct registration as a GameStop shareholder.
           Availability and eligibility may depend on jurisdiction and provider restrictions.
           Crypto and tokenized assets involve substantial risk, and rewards are variable and not

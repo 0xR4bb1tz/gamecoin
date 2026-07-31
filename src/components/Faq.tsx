@@ -5,7 +5,7 @@ const questions = [
   {
     question: "What is GameCoin?",
     answer:
-      "GameCoin is an independent community token on Robinhood Chain. It takes its name and cultural starting point from GameStop's historical Game Coin promotion, then applies that idea to an onchain GAME/GME market and holder-reward loop.",
+      "GameCoin is an independent community token on Robinhood Chain. It takes its name and cultural starting point from GameStop's historical Game Coin promotion, then applies that idea to an onchain GAMECOIN/GME market and holder-reward loop.",
   },
   {
     question: "Is this an official GameStop token?",
@@ -25,11 +25,11 @@ const questions = [
   {
     question: "Is staking required?",
     answer:
-      "No staking is required. Eligibility is based on holding the configured minimum GAME balance, subject to the deployed Flap contract behavior.",
+      "No staking is required. Eligibility is based on holding the configured minimum GAMECOIN balance, subject to the deployed Flap contract behavior.",
   },
   {
     question: "What balance is required to qualify?",
-    answer: `${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME is the configured minimum eligible balance.`,
+    answer: `${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAMECOIN is the configured minimum eligible balance.`,
   },
   {
     question: "What are the buy and sell taxes?",
@@ -50,14 +50,14 @@ const questions = [
       "Flap can process dividends automatically in batches, while manual claiming can also be supported. Timing depends on trading activity, thresholds, gas conditions, and contract processing; no exact payout schedule is promised.",
   },
   {
-    question: "Where can GAME be traded?",
+    question: "Where can GAMECOIN be traded?",
     answer:
-      "GAME trades on Flap against tokenized GME. Always enter through an official link and verify the GAME contract address before trading.",
+      "GAMECOIN trades on Flap against tokenized GME. Always enter through an official link and verify the GAMECOIN contract address before trading.",
   },
   {
     question: "What are the risks?",
     answer:
-      "GAME is experimental. Crypto and tokenized assets can be highly volatile, illiquid, restricted, or lose all value. Smart-contract, market, provider, and regulatory risks apply. Rewards are variable and never guaranteed.",
+      "GAMECOIN is experimental. Crypto and tokenized assets can be highly volatile, illiquid, restricted, or lose all value. Smart-contract, market, provider, and regulatory risks apply. Rewards are variable and never guaranteed.",
   },
 ];
 

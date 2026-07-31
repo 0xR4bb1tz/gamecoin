@@ -32,7 +32,7 @@ const title = Buffer.from(`
     <rect width="1200" height="630" fill="#050805"/>
     <rect width="1200" height="630" fill="url(#grid)"/>
     <circle cx="930" cy="315" r="260" fill="#ccff00" fill-opacity=".045"/>
-    <text x="76" y="95" fill="#ccff00" font-family="monospace" font-size="18" letter-spacing="4">ROBINHOOD CHAIN / GAME-GME</text>
+    <text x="76" y="95" fill="#ccff00" font-family="monospace" font-size="18" letter-spacing="4">ROBINHOOD CHAIN / GAMECOIN-GME</text>
     <text x="76" y="235" fill="#f3f5e9" font-family="Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="-5">PLAY THE</text>
     <text x="76" y="327" fill="#f3f5e9" font-family="Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="-5">MARKET.</text>
     <text x="76" y="419" fill="#ccff00" font-family="Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="-5">EARN GME.</text>

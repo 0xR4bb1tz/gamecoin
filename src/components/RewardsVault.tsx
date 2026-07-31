@@ -9,10 +9,10 @@ interface RewardsVaultProps {
 }
 
 const flow = [
-  ["01", "GAME trades", "Buys and sells occur against tokenized GME."],
+  ["01", "GAMECOIN trades", "Buys and sells occur against tokenized GME."],
   ["02", "Tax accrues", "The configured token tax is collected by Flap's V6 infrastructure."],
   ["03", "GME routes directly", "The quote token is already the dividend token, so no swap is needed."],
-  ["04", "Players receive", "Eligible GAME holders receive rewards without staking."],
+  ["04", "Players receive", "Eligible GAMECOIN holders receive rewards without staking."],
 ];
 
 export function RewardsVault({ state }: RewardsVaultProps) {
@@ -43,7 +43,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
             <h3>GME enters.<br />Players level up.</h3>
             <p>
               Reward allocation: <strong>{bpsToPercent(projectConfig.economics.rewardAllocationBps)}</strong> of
-              allocatable trading-tax revenue is deposited for eligible GAME holders in GME.
+              allocatable trading-tax revenue is deposited for eligible GAMECOIN holders in GME.
             </p>
           </div>
         </div>

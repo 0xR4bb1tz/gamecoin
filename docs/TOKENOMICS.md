@@ -4,8 +4,8 @@
 
 - Network: Robinhood Chain
 - Launchpad: Flap
-- Trading pair: `GAME / GME`
-- Total supply: `1,000,000,000 GAME`
+- Trading pair: `GAMECOIN / GME`
+- Total supply: `1,000,000,000 GAMECOIN`
 
 ## Trading tax
 
@@ -19,9 +19,9 @@
 
 ## Holder rewards
 
-Eligible GAME holders receive GME proportionally according to their eligible GAME balance.
+Eligible GAMECOIN holders receive GME proportionally according to their eligible GAMECOIN balance.
 
-- Minimum eligible holding: `10,000 GAME`
+- Minimum eligible holding: `10,000 GAMECOIN`
 - Quote token: `GME`
 - Dividend token: `GME`
 - Staking required: no

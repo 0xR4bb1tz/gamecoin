@@ -1,6 +1,6 @@
 # GameCoin Website
 
-Production-ready live website for GameCoin, a GAME/GME token launched through Flap on Robinhood Chain.
+Production-ready live website for GameCoin, a GAMECOIN/GME token launched through Flap on Robinhood Chain.
 
 ## Local setup
 
@@ -42,7 +42,7 @@ The canonical fee distribution and deployed-parameter checklist are documented i
 ## Connecting production data
 
 1. Confirm the final Flap token settings.
-2. Add the deployed GAME, GAME/GME pool, and dividend distributor addresses.
+2. Add the deployed GAMECOIN, GAMECOIN/GME pool, and dividend distributor addresses.
 3. Add the final Flap, DexScreener, GMGN, and social URLs.
 4. Set `VITE_SITE_URL` to the final HTTPS origin so Discord and X receive an absolute image URL.
 5. Confirm buy tax, sell tax, reward allocation, and minimum eligible balance.
@@ -55,8 +55,8 @@ explicit syncing states and never fabricate market, reward, trade, or holder dat
 
 ## Required post-deployment checklist
 
-- [ ] GAME contract address
-- [ ] GAME/GME pool address
+- [ ] GAMECOIN contract address
+- [ ] GAMECOIN/GME pool address
 - [ ] Flap dividend distributor address
 - [ ] Final Flap token page
 - [ ] Final DexScreener direct pair URL
@@ -64,11 +64,11 @@ explicit syncing states and never fabricate market, reward, trade, or holder dat
 - [ ] Official X URL
 - [ ] Official Telegram URL
 - [ ] Official Discord URL
-- [ ] Confirmed GAME token decimals
+- [ ] Confirmed GAMECOIN token decimals
 - [ ] Confirmed GME token decimals
 - [ ] Confirmed buy-tax basis points
 - [ ] Confirmed sell-tax basis points
-- [ ] Confirmed minimum eligible GAME balance
+- [ ] Confirmed minimum eligible GAMECOIN balance
 - [ ] Confirmed post-protocol reward allocation
 - [ ] Flap V6 token ABI
 - [ ] Dividend distributor ABI

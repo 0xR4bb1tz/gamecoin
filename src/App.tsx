@@ -64,7 +64,7 @@ function Hero() {
           <span>EARN GME.</span>
         </h1>
         <p className="hero-lead">
-          A community-built GAME/GME token inspired by GameStop's 2021 Game Coin post. GAME
+          A community-built GAMECOIN/GME token inspired by GameStop's 2021 Game Coin post. GAMECOIN
           trades against tokenized GME, turning eligible trading-tax revenue into GME holder
           rewards without staking.
         </p>
@@ -85,7 +85,7 @@ function Hero() {
         <div className="hero-pair">
           <div>
             <span>TRADING PAIR</span>
-            <strong>GAME / GME</strong>
+            <strong>GAMECOIN / GME</strong>
           </div>
           <div>
             <span>REWARD ASSET</span>
@@ -100,7 +100,7 @@ function Hero() {
 
       <div className="hero-visual" aria-label="GameCoin live status">
         <div className="score-label">
-          <span>GAME STATUS</span>
+          <span>GAMECOIN STATUS</span>
           <strong>ONLINE</strong>
         </div>
         <div className="coin-stage">
@@ -112,7 +112,7 @@ function Hero() {
         </div>
         <div className="visual-readout">
           <span>CHAIN <strong>4663</strong></span>
-          <span>PAIR <strong>GAME/GME</strong></span>
+          <span>PAIR <strong>GAMECOIN/GME</strong></span>
           <span>MODE <strong>LIVE</strong></span>
         </div>
       </div>
@@ -169,13 +169,13 @@ function OriginStory() {
         </div>
 
         <article className="origin-story origin-story-now hud-corners">
-          <span className="origin-year">GAME</span>
-          <p className="origin-eyebrow">ROBINHOOD CHAIN / GAME-GME</p>
+          <span className="origin-year">GAMECOIN</span>
+          <p className="origin-eyebrow">ROBINHOOD CHAIN / GAMECOIN-GME</p>
           <h3>The onchain continuation.</h3>
           <p>
             GameCoin follows the narrative formula with transparent contracts: launch through
             Flap, trade against tokenized GME, and route the configured dividend share directly
-            to eligible GAME holders in GME.
+            to eligible GAMECOIN holders in GME.
           </p>
           <span className="independent-label">INDEPENDENT COMMUNITY PROJECT</span>
         </article>
@@ -203,7 +203,7 @@ function OriginStory() {
           }
         >
           <span>REWARD ENGINE ART / 16:9</span>
-          <strong>GAME IN. GME OUT.</strong>
+          <strong>GAMECOIN IN. GME OUT.</strong>
           <small>{projectConfig.media.rewardCampaign ? "GME REWARD ENGINE" : "Artwork slot ready"}</small>
         </article>
       </div>
@@ -213,17 +213,17 @@ function OriginStory() {
 
 function Mechanics() {
   const steps = [
-    ["ROUND 01", "Trade against GME", "GAME launches and trades directly against tokenized GME through Flap."],
+    ["ROUND 01", "Trade against GME", "GAMECOIN launches and trades directly against tokenized GME through Flap."],
     ["ROUND 02", "Trades create tax", `The configured buy and sell tax is ${bpsToPercent(projectConfig.economics.buyTaxBps)} per side.`],
     ["ROUND 03", "GME routes directly", "Because GME is both quote and dividend token, the reward share needs no token swap."],
-    ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME qualify without staking.`],
+    ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAMECOIN qualify without staking.`],
   ];
 
   return (
     <section className="section-block" id="mechanics">
       <div className="section-heading">
         <div>
-          <span className="section-index">06 / GAME LOOP</span>
+          <span className="section-index">06 / GAMECOIN LOOP</span>
           <h2>Four rounds. One clean loop.</h2>
         </div>
         <p>
@@ -256,13 +256,13 @@ function Mechanics() {
             denominated in tokenized GME.
           </p>
           <p>
-            Built for Robinhood Chain and launched through Flap, GAME is a community experiment - not
+            Built for Robinhood Chain and launched through Flap, GAMECOIN is a community experiment - not
             an official product of GameStop, Robinhood, Flap, or the tokenized-GME issuer.
           </p>
         </div>
         <div className="identity-score">
           <div><span>PLAYER</span><strong>HOLDER</strong></div>
-          <div><span>SCORE</span><strong>GAME</strong></div>
+          <div><span>SCORE</span><strong>GAMECOIN</strong></div>
           <div><span>DROP</span><strong>GME</strong></div>
           <div><span>ARENA</span><strong>RHC</strong></div>
         </div>

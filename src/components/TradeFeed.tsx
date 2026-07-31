@@ -14,13 +14,13 @@ export function TradeFeed({ state }: { state: DataState }) {
           <span className="section-index">07 / LIVE MATCH</span>
           <h2>Recent trades</h2>
         </div>
-        <p>Verified GAME/GME activity, indexed from the live pool and linked to the explorer.</p>
+        <p>Verified GAMECOIN/GME activity, indexed from the live pool and linked to the explorer.</p>
       </div>
 
       <div className="trade-feed">
         <div className="trade-header">
           <span>Side</span>
-          <span>GAME</span>
+          <span>GAMECOIN</span>
           <span>Value</span>
           <span>Player</span>
           <span>Time</span>
@@ -30,7 +30,7 @@ export function TradeFeed({ state }: { state: DataState }) {
           trades.map((trade) => (
             <a className="trade-row" href={explorerTxUrl(trade.hash)} target="_blank" rel="noreferrer" key={trade.hash}>
               <span className={`trade-side is-${trade.side}`}>{trade.side}</span>
-              <strong>{formatDecimal(trade.gameAmount, { maximumFractionDigits: 2 })}</strong>
+              <strong>{formatDecimal(trade.gamecoinAmount, { maximumFractionDigits: 2 })}</strong>
               <span>
                 {trade.valueGme !== null
                   ? `${formatDecimal(trade.valueGme, { maximumFractionDigits: 4 })} GME`

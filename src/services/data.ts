@@ -33,7 +33,7 @@ const liveDataSchema = z.object({
     z.object({
       hash: z.string(),
       side: z.enum(["buy", "sell"]),
-      gameAmount: z.number().finite(),
+      gamecoinAmount: z.number().finite(),
       valueGme: nullableNumber,
       valueUsd: nullableNumber,
       wallet: z.string(),
@@ -45,7 +45,7 @@ const liveDataSchema = z.object({
       z.object({
         label: z.string(),
         address: z.string(),
-        balanceGame: nullableNumber,
+        balanceGamecoin: nullableNumber,
         rewardsGme: nullableNumber,
       }),
     )

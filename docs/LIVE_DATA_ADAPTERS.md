@@ -11,10 +11,10 @@ The shared Worker endpoint is implemented in `worker/index.ts`.
 
 ### DexScreener
 
-Used for pair-level values when a valid GAME/GME pool address exists:
+Used for pair-level values when a valid GAMECOIN/GME pool address exists:
 
-- GAME price in GME (`priceNative`)
-- GAME price in USD (`priceUsd`)
+- GAMECOIN price in GME (`priceNative`)
+- GAMECOIN price in USD (`priceUsd`)
 - Market capitalization or FDV
 - Liquidity in USD
 - 24-hour volume in USD
@@ -33,7 +33,7 @@ GET /api/v2/tokens/{GAME_ADDRESS}/counters
 
 No Flap ABI was present locally, so the site does not invent reward or trade data. Add verified interfaces for these fields after deployment.
 
-### GAME token
+### GAMECOIN token
 
 Expected reads:
 
@@ -70,12 +70,12 @@ Verify:
 
 The website must describe the reward allocation as a share of **allocatable post-protocol token-tax revenue**, never as 100% of gross trading taxes.
 
-### GAME/GME pool
+### GAMECOIN/GME pool
 
 For a live trade feed, supply either a verified pool ABI or an indexed event schema containing:
 
 - Buy or sell direction
-- GAME amount
+- GAMECOIN amount
 - GME amount
 
 ### Notable holder board
@@ -88,7 +88,7 @@ The `/api/live` response may include a `notableHolders` array:
     {
       "label": "PLAYER LABEL",
       "address": "0x...",
-      "balanceGame": 0,
+      "balanceGamecoin": 0,
       "rewardsGme": 0
     }
   ]

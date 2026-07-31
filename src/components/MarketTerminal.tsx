@@ -8,8 +8,8 @@ interface MarketTerminalProps {
 }
 
 const labels = [
-  ["GAME / GME", "priceGme"],
-  ["GAME / USD", "priceUsd"],
+  ["GAMECOIN / GME", "priceGme"],
+  ["GAMECOIN / USD", "priceUsd"],
   ["Market cap", "marketCapUsd"],
   ["Liquidity", "liquidityUsd"],
   ["24h volume", "volume24hUsd"],
@@ -50,7 +50,7 @@ export function MarketTerminal({ state }: MarketTerminalProps) {
 
       <div className="terminal-shell hud-corners">
         <div className="terminal-topline">
-          <span><i /> GAME / GME</span>
+          <span><i /> GAMECOIN / GME</span>
           <span>{market ? `SYNC ${new Date(market.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` : "SYNCING DATA"}</span>
         </div>
         <div className="market-grid">
@@ -66,7 +66,7 @@ export function MarketTerminal({ state }: MarketTerminalProps) {
         <div className="chart-frame">
           <div className="chart-label">
             <span><Icon name="chart" size={16} /> PRICE HISTORY</span>
-            <span>GAME / GME</span>
+            <span>GAMECOIN / GME</span>
           </div>
           {state.status === "ready" && market?.priceGme !== null ? (
             <div className="chart-ready" role="img" aria-label="Price chart placeholder awaiting historical data adapter">
