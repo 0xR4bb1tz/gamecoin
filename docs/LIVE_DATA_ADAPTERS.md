@@ -1,5 +1,10 @@
 # Live Data Adapter Guide
 
+Official protocol references:
+
+- https://docs.flap.sh/flap
+- https://docs.flap.sh/flap/developers/flap-tax-token/tax-token-v2
+
 ## Current public sources
 
 The shared Worker endpoint is implemented in `worker/index.ts`.
@@ -87,4 +92,3 @@ All raw integer quantities must be formatted with the actual token decimals. Do 
 - Preserve the last successful shared cache entry during brief upstream failures where appropriate.
 - Never substitute generated values for missing provider data.
 - Keep transactions read-only; no private keys or signing logic belong in this website.
-

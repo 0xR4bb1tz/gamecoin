@@ -42,7 +42,7 @@ export function MarketTerminal({ state }: MarketTerminalProps) {
     <section className="section-block" id="terminal">
       <div className="section-heading">
         <div>
-          <span className="section-index">01 / MARKET TERMINAL</span>
+          <span className="section-index">02 / MARKET TERMINAL</span>
           <h2>Live game board</h2>
         </div>
         <p>Public market signals, refreshed through a shared cache without fabricated fallback figures.</p>

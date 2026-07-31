@@ -16,15 +16,15 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-main">
         <a className="brand-lockup footer-brand" href="#top">
-          <img src="/gamecoin-logo-placeholder.svg" alt="" />
+          <img src="/gamecoin.png" alt="" />
           <span>
             <strong>GAMECOIN</strong>
             <small>PLAY THE MARKET. EARN GME.</small>
           </span>
         </a>
         <p>
-          An experimental GAME/GME token concept planned for Robinhood Chain. No staking.
-          No guaranteed rewards. Verify every contract.
+          An independent GAME/GME community token planned for Robinhood Chain. Inspired by
+          internet market culture. Built around transparent onchain rules.
         </p>
         <div className="footer-links">
           {links.length ? (

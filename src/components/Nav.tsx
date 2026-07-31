@@ -3,9 +3,9 @@ import { projectConfig } from "../config/project";
 import { Icon } from "./Icons";
 
 const links = [
+  ["Origin", "#origin"],
   ["Terminal", "#terminal"],
   ["Rewards", "#rewards"],
-  ["Game loop", "#mechanics"],
   ["FAQ", "#faq"],
 ];
 
@@ -21,7 +21,7 @@ export function Nav() {
   return (
     <header className="site-header">
       <a className="brand-lockup" href="#top" aria-label="GameCoin home">
-        <img src="/gamecoin-logo-placeholder.svg" alt="" />
+        <img src="/gamecoin.png" alt="" />
         <span>
           <strong>GAMECOIN</strong>
           <small>PLAYER 01 / {projectConfig.mode.toUpperCase()}</small>

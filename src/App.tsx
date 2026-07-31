@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import { Icon } from "./components/Icons";
@@ -20,7 +21,7 @@ function ActionLink({
   variant = "primary",
 }: {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: "primary" | "secondary" | "ghost";
 }) {
   return (
@@ -50,15 +51,15 @@ function Hero() {
           <span>{projectConfig.network.name}</span>
           <span>POWERED BY {projectConfig.launch.platform.toUpperCase()}</span>
         </div>
-        <p className="hero-kicker">PLAYER-OWNED MARKET ENERGY / ROUND 00</p>
+        <p className="hero-kicker">THE 2021 SIGNAL, REBUILT ONCHAIN / ROUND 00</p>
         <h1>
           PLAY THE MARKET.
           <span>EARN GME.</span>
         </h1>
         <p className="hero-lead">
-          GameCoin is the stock-powered game coin planned for Robinhood Chain. GAME will trade
-          directly against tokenized GME, with configured token-tax revenue routing GME rewards
-          to eligible holders—without staking.
+          A community-built GAME/GME token inspired by GameStop's 2021 Game Coin post. GAME is
+          planned to trade against tokenized GME, turning eligible trading-tax revenue into GME
+          holder rewards without staking.
         </p>
         <div className="hero-actions">
           <ActionLink href={projectConfig.launch.flapUrl}>
@@ -99,7 +100,7 @@ function Hero() {
           <i className="scan-ring ring-one" />
           <i className="scan-ring ring-two" />
           <i className="scan-ring ring-three" />
-          <img src="/gamecoin-logo-placeholder.svg" alt="Temporary GameCoin logo placeholder" />
+          <img src="/gamecoin.png" alt="GameCoin controller coin" />
           <span className="coin-shadow" />
         </div>
         <div className="visual-readout">
@@ -112,11 +113,83 @@ function Hero() {
   );
 }
 
+function OriginStory() {
+  return (
+    <section className="section-block origin-section" id="origin">
+      <div className="section-heading">
+        <div>
+          <span className="section-index">01 / ORIGIN SIGNAL</span>
+          <h2>A name the internet already remembers.</h2>
+        </div>
+        <p>
+          The inspiration is historical. The token is new, independent, and built for a different
+          onchain chapter.
+        </p>
+      </div>
+
+      <div className="origin-grid">
+        <article className="origin-story hud-corners">
+          <span className="origin-year">2021</span>
+          <p className="origin-eyebrow">GAMESTOP / GAME COIN</p>
+          <h3>The original signal.</h3>
+          <p>
+            In 2021, GameStop publicly promoted its Game Coin rewards concept. That post became
+            part of the same internet-market era that turned players, traders, and online
+            communities into a shared cultural force.
+          </p>
+          <a
+            className="source-link"
+            href={projectConfig.launch.originPostUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View the source post
+            <Icon name="external" size={15} />
+          </a>
+        </article>
+
+        <div className="origin-bridge" aria-hidden="true">
+          <span>THEN</span>
+          <i />
+          <strong>PLAYER ONE</strong>
+          <i />
+          <span>NOW</span>
+        </div>
+
+        <article className="origin-story origin-story-now hud-corners">
+          <span className="origin-year">GAME</span>
+          <p className="origin-eyebrow">ROBINHOOD CHAIN / GAME-GME</p>
+          <h3>The onchain continuation.</h3>
+          <p>
+            GameCoin follows the narrative formula with transparent contracts: launch through
+            Flap, trade against tokenized GME, and route the configured dividend share back to
+            eligible GAME holders as GME.
+          </p>
+          <span className="independent-label">INDEPENDENT COMMUNITY PROJECT</span>
+        </article>
+      </div>
+
+      <div className="campaign-slots" aria-label="Future campaign artwork placeholders">
+        <article>
+          <span>CAMPAIGN ART / 16:9</span>
+          <strong>POWER TO THE PLAYERS</strong>
+          <small>Replace with final launch artwork</small>
+        </article>
+        <article>
+          <span>REWARD ENGINE ART / 16:9</span>
+          <strong>GAME IN. GME OUT.</strong>
+          <small>Replace with final rewards artwork</small>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 function Mechanics() {
   const steps = [
     ["ROUND 01", "Launch against GME", "GAME is planned to launch and trade directly against tokenized GME through Flap."],
     ["ROUND 02", "Trades create tax", `The planned buy and sell tax is ${bpsToPercent(projectConfig.economics.buyTaxBps)} per side.`],
-    ["ROUND 03", "Rewards convert", "The allocatable reward share is converted into tokenized GME by Flap’s standard infrastructure."],
+    ["ROUND 03", "Rewards convert", "The allocatable reward share is converted into tokenized GME by Flap's standard infrastructure."],
     ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAME are planned to qualify without staking.`],
   ];
 
@@ -124,7 +197,7 @@ function Mechanics() {
     <section className="section-block" id="mechanics">
       <div className="section-heading">
         <div>
-          <span className="section-index">03 / GAME LOOP</span>
+          <span className="section-index">04 / GAME LOOP</span>
           <h2>Four rounds. One clean loop.</h2>
         </div>
         <p>
@@ -152,13 +225,13 @@ function Mechanics() {
           <span className="section-index">GAMECOIN IDENTITY</span>
           <h2>The market is live.<br />Every holder is a player.</h2>
           <p>
-            GameCoin turns market participation into a shared scoreboard: player-owned momentum,
-            transparent onchain rules, and rewards denominated in the asset at the center of the
-            culture—tokenized GME.
+            The 2021 idea was a reward for players. This independent onchain version keeps the
+            player-first energy and turns market participation into a transparent reward loop
+            denominated in tokenized GME.
           </p>
           <p>
-            Built for Robinhood Chain and planned for Flap, GAME is a community experiment—not an
-            official product of GameStop, Robinhood, Flap, or the tokenized-GME issuer.
+            Built for Robinhood Chain and planned for Flap, GAME is a community experiment - not
+            an official product of GameStop, Robinhood, Flap, or the tokenized-GME issuer.
           </p>
         </div>
         <div className="identity-score">
@@ -181,6 +254,7 @@ export default function App() {
       <Nav />
       <main id="main">
         <Hero />
+        <OriginStory />
         <StatusStrip />
         <MarketTerminal state={dataState} />
         <RewardsVault state={dataState} />

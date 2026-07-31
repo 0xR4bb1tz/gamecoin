@@ -5,7 +5,12 @@ const questions = [
   {
     question: "What is GameCoin?",
     answer:
-      "GameCoin is a planned token on Robinhood Chain designed to trade directly against tokenized GME. Its configured reward allocation is intended to deliver GME rewards to eligible GAME holders.",
+      "GameCoin is an independent community token planned for Robinhood Chain. It takes its name and cultural starting point from GameStop's historical Game Coin promotion, then applies that idea to an onchain GAME/GME market and holder-reward loop.",
+  },
+  {
+    question: "Is this an official GameStop token?",
+    answer:
+      "No. GameCoin is not created, sponsored, endorsed, or operated by GameStop. The 2021 GameStop post is historical inspiration only. GameStop's original Game Coin was a retail rewards promotion, not this crypto token.",
   },
   {
     question: "What is tokenized GME?",
@@ -15,7 +20,7 @@ const questions = [
   {
     question: "How do GME rewards work?",
     answer:
-      "Flap’s standard V6 tax-token system collects the configured token tax. After protocol handling, the allocatable reward share is converted into GME and processed by the standard dividend distributor.",
+      "Flap's standard V6 tax-token system collects the configured token tax. After protocol handling, the allocatable reward share is converted into tokenized GME and processed by the standard dividend distributor.",
   },
   {
     question: "Is staking required?",
@@ -39,7 +44,7 @@ const questions = [
   {
     question: "How frequently are rewards paid?",
     answer:
-      "The Flap contracts may process dividends automatically in batches, with manual claiming supported. Timing depends on trading activity, thresholds, gas conditions, and contract processing; no exact payout schedule is promised.",
+      "Flap can process dividends automatically in batches, while manual claiming can also be supported. Timing depends on trading activity, thresholds, gas conditions, and contract processing; no exact payout schedule is promised.",
   },
   {
     question: "Where can GAME be traded?",
@@ -61,10 +66,10 @@ export function Faq() {
     <section className="section-block" id="faq">
       <div className="section-heading">
         <div>
-          <span className="section-index">05 / HELP MENU</span>
+          <span className="section-index">06 / HELP MENU</span>
           <h2>Player guide</h2>
         </div>
-        <p>Straight answers about the planned launch, reward system, and risks.</p>
+        <p>Straight answers about the origin, planned launch, reward system, and risks.</p>
       </div>
       <div className="faq-list">
         {questions.map((item, index) => {
@@ -79,7 +84,7 @@ export function Faq() {
                 >
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   {item.question}
-                  <i aria-hidden="true">{expanded ? "−" : "+"}</i>
+                  <i aria-hidden="true">{expanded ? "-" : "+"}</i>
                 </button>
               </h3>
               <div className="faq-answer" hidden={!expanded}>

@@ -41,10 +41,11 @@ Copy `.env.example` to `.env.local` for local overrides. Do not commit `.env.loc
 1. Confirm the final Flap token settings.
 2. Add the deployed GAME, GAME/GME pool, and dividend distributor addresses.
 3. Add the final Flap, DexScreener, GMGN, and social URLs.
-4. Confirm buy tax, sell tax, reward allocation, and minimum eligible balance.
-5. Change `VITE_GAMECOIN_MODE` from `prelaunch` to `live`.
-6. Run all quality checks.
-7. Verify every external link against the deployed contracts before publishing.
+4. Set `VITE_SITE_URL` to the final HTTPS origin so Discord and X receive an absolute image URL.
+5. Confirm buy tax, sell tax, reward allocation, and minimum eligible balance.
+6. Change `VITE_GAMECOIN_MODE` from `prelaunch` to `live`.
+7. Run all quality checks.
+8. Verify every external link against the deployed contracts before publishing.
 
 The page structure does not need to change. Prelaunch labels, disabled actions, and empty states automatically become live when valid configuration is supplied.
 
@@ -70,17 +71,19 @@ The page structure does not need to change. Prelaunch labels, disabled actions, 
 - [ ] Tax processor ABI
 - [ ] Pool ABI or verified indexer event format
 - [ ] Final production domain for metadata, `robots.txt`, and `sitemap.xml`
-- [ ] Final GameCoin logo, favicon, and Open Graph image
+- [ ] Final production site URL
 
-## Temporary logo
+## Brand assets
 
-The final logo was not present in the supplied attachment folder. The temporary asset is intentionally isolated at:
+The supplied production logo is stored at `public/gamecoin.png`. The favicon and `1200x630`
+Open Graph image are generated from it:
 
 ```text
-public/gamecoin-logo-placeholder.svg
+public/favicon.ico
+public/gamecoin-og.png
 ```
 
-Replace that file with the final logo using the same filename, or update its references in `index.html`, `site.webmanifest`, and the React components. Replace `public/gamecoin-og-placeholder.svg` with a production `1200x630` PNG before public launch.
+Regenerate those derivatives after replacing the source logo.
 
 ## Data architecture
 
@@ -104,4 +107,3 @@ npx wrangler deploy
 ```
 
 Do not deploy until the Cloudflare account/project and production domain are explicitly approved.
-

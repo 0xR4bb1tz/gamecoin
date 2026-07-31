@@ -22,7 +22,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
     <section className="section-block rewards-section" id="rewards">
       <div className="section-heading">
         <div>
-          <span className="section-index">02 / REWARD DROP</span>
+          <span className="section-index">03 / REWARD DROP</span>
           <h2>GME Rewards Vault</h2>
         </div>
         <p>
@@ -36,7 +36,7 @@ export function RewardsVault({ state }: RewardsVaultProps) {
           <div className="vault-orbit" aria-hidden="true">
             <span className="orbit orbit-one" />
             <span className="orbit orbit-two" />
-            <img src="/gamecoin-logo-placeholder.svg" alt="" />
+            <img src="/gamecoin.png" alt="" />
           </div>
           <div className="vault-copy">
             <span className="live-chip"><i /> {rewards ? "VAULT ONLINE" : "VAULT PENDING"}</span>

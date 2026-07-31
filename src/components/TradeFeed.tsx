@@ -11,7 +11,7 @@ export function TradeFeed({ state }: { state: DataState }) {
     <section className="section-block" id="trades">
       <div className="section-heading compact-heading">
         <div>
-          <span className="section-index">04 / LIVE MATCH</span>
+          <span className="section-index">05 / LIVE MATCH</span>
           <h2>Recent trades</h2>
         </div>
         <p>Verified GAME/GME activity will populate here after the final pool adapter is enabled.</p>

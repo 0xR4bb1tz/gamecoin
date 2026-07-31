@@ -1,16 +1,16 @@
 {
   "name": "GameCoin",
   "short_name": "GAME",
-  "description": "The planned stock-powered game coin on Robinhood Chain.",
+  "description": "An independent GAME/GME community token planned for Robinhood Chain.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050805",
   "theme_color": "#07110a",
   "icons": [
     {
-      "src": "/gamecoin-logo-placeholder.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/gamecoin.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

@@ -26,6 +26,7 @@ export interface ProjectConfig {
     flapUrl: string;
     dexScreenerUrl: string;
     gmgnUrl: string;
+    originPostUrl: string;
   };
   economics: {
     buyTaxBps: number;
@@ -86,6 +87,9 @@ export const projectConfig: ProjectConfig = {
       (gameAddress ? `https://flap.sh/robinhood/${gameAddress}` : ""),
     dexScreenerUrl: env.VITE_DEXSCREENER_URL || "",
     gmgnUrl: env.VITE_GMGN_URL || "",
+    originPostUrl:
+      env.VITE_ORIGIN_POST_URL ||
+      "https://x.com/gamestop/status/1405605194029801473?s=20",
   },
   economics: {
     buyTaxBps: numberEnv(env.VITE_BUY_TAX_BPS, 300),
