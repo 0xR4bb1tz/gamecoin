@@ -19,9 +19,8 @@
 
 ## Holder rewards
 
-Eligible GAMECOIN holders receive GME proportionally according to their eligible GAMECOIN balance.
-
-- Minimum eligible holding: `10,000 GAMECOIN`
+Eligible GAMECOIN holders receive GME proportionally according to the deployed Flap dividend
+distributor.
 - Quote token: `GME`
 - Dividend token: `GME`
 - Staking required: no

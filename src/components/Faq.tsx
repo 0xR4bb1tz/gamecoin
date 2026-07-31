@@ -25,11 +25,7 @@ const questions = [
   {
     question: "Is staking required?",
     answer:
-      "No staking is required. Eligibility is based on holding the configured minimum GAMECOIN balance, subject to the deployed Flap contract behavior.",
-  },
-  {
-    question: "What balance is required to qualify?",
-    answer: `${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAMECOIN is the configured minimum eligible balance.`,
+      "No staking is required. Holder rewards use Flap's standard onchain dividend distributor, subject to the deployed contract behavior.",
   },
   {
     question: "What are the buy and sell taxes?",

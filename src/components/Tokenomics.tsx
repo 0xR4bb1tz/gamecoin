@@ -50,8 +50,8 @@ export function Tokenomics() {
               <strong>{bpsToPercent(projectConfig.economics.sellTaxBps)}</strong>
             </article>
             <article>
-              <span>MINIMUM ELIGIBLE</span>
-              <strong>{formatCompact(projectConfig.economics.minimumEligibleBalance, "", " GAMECOIN")}</strong>
+              <span>TRADING PAIR</span>
+              <strong>GAMECOIN / GME</strong>
             </article>
           </div>
 

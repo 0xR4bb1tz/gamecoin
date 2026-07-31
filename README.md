@@ -45,7 +45,7 @@ The canonical fee distribution and deployed-parameter checklist are documented i
 2. Add the deployed GAMECOIN, GAMECOIN/GME pool, and dividend distributor addresses.
 3. Add the final Flap, DexScreener, GMGN, and social URLs.
 4. Set `VITE_SITE_URL` to the final HTTPS origin so Discord and X receive an absolute image URL.
-5. Confirm buy tax, sell tax, reward allocation, and minimum eligible balance.
+5. Confirm buy tax, sell tax, and reward allocation.
 6. Connect the production backend/indexer to the typed `/api/live` response.
 7. Run all quality checks.
 8. Verify every external link against the deployed contracts before publishing.
@@ -68,7 +68,6 @@ explicit syncing states and never fabricate market, reward, trade, or holder dat
 - [ ] Confirmed GME token decimals
 - [ ] Confirmed buy-tax basis points
 - [ ] Confirmed sell-tax basis points
-- [ ] Confirmed minimum eligible GAMECOIN balance
 - [ ] Confirmed post-protocol reward allocation
 - [ ] Flap V6 token ABI
 - [ ] Dividend distributor ABI

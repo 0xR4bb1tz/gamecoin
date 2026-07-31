@@ -38,7 +38,6 @@ export interface ProjectConfig {
   };
   media: {
     originCampaign: string;
-    rewardCampaign: string;
   };
   socials: {
     x: string;
@@ -114,9 +113,6 @@ export const projectConfig: ProjectConfig = {
     originCampaign:
       env.VITE_ORIGIN_CAMPAIGN_IMAGE ||
       "/assets/gamecoin name and logo on a skyscraper epic.png",
-    rewardCampaign:
-      env.VITE_REWARD_CAMPAIGN_IMAGE ||
-      "/assets/gme stock rocket with candlesticks under it.png",
   },
   socials: {
     x: env.VITE_X_URL || "",

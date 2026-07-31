@@ -181,31 +181,19 @@ function OriginStory() {
         </article>
       </div>
 
-      <div className="campaign-slots" aria-label="GameCoin campaign artwork">
-        <article
-          className={projectConfig.media.originCampaign ? "has-art" : ""}
-          style={
-            projectConfig.media.originCampaign
-              ? { backgroundImage: `linear-gradient(90deg, rgba(5, 8, 5, .88), rgba(5, 8, 5, .18)), url("${projectConfig.media.originCampaign}")` }
-              : undefined
-          }
-        >
-          <span>CAMPAIGN ART / 16:9</span>
-          <strong>POWER TO THE PLAYERS</strong>
-          <small>{projectConfig.media.originCampaign ? "GAMECOIN ORIGIN" : "Artwork slot ready"}</small>
-        </article>
-        <article
-          className={projectConfig.media.rewardCampaign ? "has-art" : ""}
-          style={
-            projectConfig.media.rewardCampaign
-              ? { backgroundImage: `linear-gradient(90deg, rgba(5, 8, 5, .88), rgba(5, 8, 5, .16)), url("${projectConfig.media.rewardCampaign}")` }
-              : undefined
-          }
-        >
-          <span>REWARD ENGINE ART / 16:9</span>
-          <strong>GAMECOIN IN. GME OUT.</strong>
-          <small>{projectConfig.media.rewardCampaign ? "GME REWARD ENGINE" : "Artwork slot ready"}</small>
-        </article>
+      <div className="origin-feature">
+        <figure>
+          <img src={projectConfig.media.originCampaign} alt="GameCoin city campaign artwork" />
+        </figure>
+        <div>
+          <span>FROM A RETAIL REWARD TO AN ONCHAIN MARKET</span>
+          <h3>Power to the players,<br />rebuilt for the chain.</h3>
+          <p>
+            The name began with GameStop's Game Coin promotion. This independent continuation
+            carries that player-first idea into a transparent GAMECOIN/GME market on Robinhood
+            Chain.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -216,7 +204,7 @@ function Mechanics() {
     ["ROUND 01", "Trade against GME", "GAMECOIN launches and trades directly against tokenized GME through Flap."],
     ["ROUND 02", "Trades create tax", `The configured buy and sell tax is ${bpsToPercent(projectConfig.economics.buyTaxBps)} per side.`],
     ["ROUND 03", "GME routes directly", "Because GME is both quote and dividend token, the reward share needs no token swap."],
-    ["ROUND 04", "Players receive", `Wallets holding at least ${projectConfig.economics.minimumEligibleBalance.toLocaleString()} GAMECOIN qualify without staking.`],
+    ["ROUND 04", "Players receive", "Eligible GAMECOIN holders receive GME through Flap's standard dividend distributor without staking."],
   ];
 
   return (
@@ -268,22 +256,53 @@ function Mechanics() {
         </div>
       </div>
 
-      <div className="culture-strip">
-        <article>
-          <img src="/assets/roaring kitty i like the stock banner.png" alt="Stylized I like the stock community artwork" />
-          <div><span>COMMUNITY SIGNAL</span><strong>I LIKE THE STOCK</strong></div>
+      <div className="ecosystem-stories">
+        <article className="ecosystem-story ecosystem-story-wide">
+          <div className="ecosystem-art-pair">
+            <figure>
+              <img src="/assets/robinhoodchaincoin banner.png" alt="Robinhood Chain artwork" />
+            </figure>
+            <figure className="is-round">
+              <img src="/assets/vlad tenev banner.png" alt="Vlad Tenev editorial artwork" />
+            </figure>
+          </div>
+          <div className="ecosystem-copy">
+            <span>2026 / THE ONCHAIN ARENA</span>
+            <h3>Robinhood Chain opens the next round.</h3>
+            <p>
+              Under CEO Vlad Tenev, Robinhood launched its public mainnet in 2026, advancing an
+              onchain market built around tokenized assets. GameCoin enters that new arena with
+              GME at the center of both trading and holder rewards.
+            </p>
+          </div>
         </article>
-        <article>
-          <img src="/assets/robinhoodchaincoin banner.png" alt="Stylized Robinhood Chain coin" />
-          <div><span>THE ARENA</span><strong>ROBINHOOD CHAIN</strong></div>
+
+        <article className="ecosystem-story">
+          <figure className="is-round">
+            <img src="/assets/flap reference banner flap logo against a backdrop.png" alt="Flap launch platform artwork" />
+          </figure>
+          <div className="ecosystem-copy">
+            <span>LAUNCH INFRASTRUCTURE</span>
+            <h3>Launched through Flap.</h3>
+            <p>
+              Flap provides the onchain token launch, GAMECOIN/GME market, trading-tax logic,
+              and standard dividend distribution used by GameCoin.
+            </p>
+          </div>
         </article>
-        <article>
-          <img src="/assets/flap reference banner flap logo against a backdrop.png" alt="Stylized Flap logo coin" />
-          <div><span>THE ENGINE</span><strong>FLAP</strong></div>
-        </article>
-        <article>
-          <img src="/assets/vlad tenev banner.png" alt="Stylized editorial portrait of Vlad Tenev" />
-          <div><span>CHAIN ERA</span><strong>ONCHAIN MARKETS</strong></div>
+
+        <article className="ecosystem-story">
+          <figure>
+            <img src="/assets/roaring kitty i like the stock banner.png" alt="GameStop market-culture artwork" />
+          </figure>
+          <div className="ecosystem-copy">
+            <span>THE COMMUNITY LINEAGE</span>
+            <h3>Players became market participants.</h3>
+            <p>
+              GameCoin draws from the internet culture that made GameStop a shared signal for
+              players, traders, and communities, while remaining an independent project.
+            </p>
+          </div>
         </article>
       </div>
       <p className="culture-disclaimer">
