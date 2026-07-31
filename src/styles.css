@@ -2410,18 +2410,31 @@ main {
 
   .ecosystem-art {
     inset: 0;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
     transform: none;
     opacity: 0.3;
     mask-image: none;
   }
 
   .ecosystem-art img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: right center;
+  }
+
+  .ecosystem-story::after {
+    background: linear-gradient(
+      90deg,
+      rgba(7, 17, 10, 0.98) 0%,
+      rgba(7, 17, 10, 0.84) 34%,
+      rgba(7, 17, 10, 0.38) 68%,
+      rgba(7, 17, 10, 0.08) 100%
+    );
   }
 
   .ecosystem-copy {
