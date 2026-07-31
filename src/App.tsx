@@ -276,7 +276,7 @@ function Mechanics() {
           </div>
         </article>
 
-        <article className="ecosystem-story is-art-left">
+        <article className="ecosystem-story">
           <div className="ecosystem-art" aria-hidden="true">
             <img src="/assets/flap reference banner flap logo against a backdrop.png" alt="" />
           </div>

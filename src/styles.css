@@ -1987,40 +1987,43 @@ main {
   overflow: hidden;
   border: 1px solid var(--line);
   background:
-    radial-gradient(circle at 80% 50%, rgba(204, 255, 0, 0.06), transparent 35%),
+    radial-gradient(circle at 82% 50%, rgba(204, 255, 0, 0.1), transparent 43%),
+    linear-gradient(110deg, rgba(204, 255, 0, 0.025), transparent 54%),
     var(--surface);
+}
+
+.ecosystem-story::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 5px, rgba(204, 255, 0, 0.012) 5px 6px),
+    radial-gradient(circle at 82% 50%, transparent 0 22%, rgba(7, 17, 10, 0.1) 52%, var(--surface) 94%);
+  content: "";
+  pointer-events: none;
 }
 
 .ecosystem-story::after {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   background:
-    linear-gradient(90deg, var(--surface) 0%, rgba(7, 17, 10, 0.96) 49%, rgba(7, 17, 10, 0.2) 82%, var(--surface) 100%),
-    linear-gradient(0deg, var(--surface) 0%, transparent 28%, transparent 72%, var(--surface) 100%);
+    linear-gradient(90deg, var(--surface) 0%, rgba(7, 17, 10, 0.98) 43%, rgba(7, 17, 10, 0.52) 64%, rgba(7, 17, 10, 0.1) 86%, var(--surface) 100%),
+    linear-gradient(0deg, var(--surface) 0%, transparent 22%, transparent 78%, var(--surface) 100%);
   content: "";
   pointer-events: none;
-}
-
-.ecosystem-story.is-art-left::after {
-  background:
-    linear-gradient(270deg, var(--surface) 0%, rgba(7, 17, 10, 0.96) 49%, rgba(7, 17, 10, 0.2) 82%, var(--surface) 100%),
-    linear-gradient(0deg, var(--surface) 0%, transparent 28%, transparent 72%, var(--surface) 100%);
 }
 
 .ecosystem-art {
   position: absolute;
   top: 50%;
-  right: clamp(-40px, 3vw, 48px);
-  width: min(42vw, 480px);
+  right: clamp(-20px, 3vw, 54px);
+  width: min(44vw, 510px);
   aspect-ratio: 1;
-  opacity: 0.64;
+  opacity: 0.66;
+  filter: saturate(0.9) contrast(1.06);
+  mask-image: radial-gradient(circle at center, black 34%, rgba(0, 0, 0, 0.84) 52%, transparent 77%);
   transform: translateY(-50%);
-}
-
-.ecosystem-story.is-art-left .ecosystem-art {
-  right: auto;
-  left: clamp(-40px, 3vw, 48px);
 }
 
 .ecosystem-art img {
@@ -2031,30 +2034,35 @@ main {
 }
 
 .ecosystem-art-pair {
-  display: grid;
+  display: block;
   width: min(54vw, 610px);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
+  mask-image: radial-gradient(ellipse at center, black 30%, rgba(0, 0, 0, 0.88) 54%, transparent 80%);
 }
 
 .ecosystem-art-pair img {
+  position: absolute;
+  top: 50%;
+  width: 62%;
+  height: auto;
   aspect-ratio: 1;
+  transform: translateY(-50%);
+}
+
+.ecosystem-art-pair img:first-child {
+  left: 0;
 }
 
 .ecosystem-art-pair img:last-child {
+  right: 0;
   border-radius: 50%;
-  transform: translateX(-12%);
+  transform: translateY(-50%);
 }
 
 .ecosystem-copy {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: min(55%, 650px);
   min-width: 0;
-}
-
-.ecosystem-story.is-art-left .ecosystem-copy {
-  justify-self: end;
 }
 
 .culture-disclaimer {
@@ -2366,8 +2374,7 @@ main {
     padding: 30px 24px;
   }
 
-  .ecosystem-art,
-  .ecosystem-story.is-art-left .ecosystem-art {
+  .ecosystem-art {
     right: -38%;
     left: auto;
     width: min(112vw, 470px);
@@ -2379,8 +2386,7 @@ main {
     width: min(150vw, 610px);
   }
 
-  .ecosystem-copy,
-  .ecosystem-story.is-art-left .ecosystem-copy {
+  .ecosystem-copy {
     width: 100%;
     justify-self: start;
   }
