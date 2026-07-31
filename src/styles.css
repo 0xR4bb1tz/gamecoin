@@ -1451,12 +1451,12 @@ main {
   z-index: 0;
   top: 0;
   right: 0;
-  width: 48%;
+  width: 54%;
   height: 100%;
-  opacity: 0.34;
+  opacity: 0.66;
   object-fit: cover;
   object-position: center;
-  mask-image: linear-gradient(90deg, transparent, black 45%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 24%, black 48%, black 100%);
 }
 
 .origin-story:first-child > p:not(.origin-eyebrow) {
@@ -2002,7 +2002,7 @@ main {
   z-index: 1;
   background:
     repeating-linear-gradient(0deg, transparent 0 5px, rgba(204, 255, 0, 0.012) 5px 6px),
-    radial-gradient(circle at 82% 50%, transparent 0 22%, rgba(7, 17, 10, 0.1) 52%, var(--surface) 94%);
+    linear-gradient(90deg, transparent 62%, rgba(204, 255, 0, 0.025) 100%);
   content: "";
   pointer-events: none;
 }
@@ -2011,9 +2011,14 @@ main {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background:
-    linear-gradient(90deg, var(--surface) 0%, rgba(7, 17, 10, 0.98) 43%, rgba(7, 17, 10, 0.52) 64%, rgba(7, 17, 10, 0.1) 86%, var(--surface) 100%),
-    linear-gradient(0deg, var(--surface) 0%, transparent 22%, transparent 78%, var(--surface) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--surface) 0%,
+    var(--surface) 42%,
+    rgba(7, 17, 10, 0.86) 54%,
+    rgba(7, 17, 10, 0.18) 72%,
+    transparent 84%
+  );
   content: "";
   pointer-events: none;
 }
@@ -2021,12 +2026,12 @@ main {
 .ecosystem-art {
   position: absolute;
   top: 50%;
-  right: clamp(-20px, 3vw, 54px);
-  width: min(44vw, 510px);
+  right: 0;
+  width: min(47vw, 540px);
   aspect-ratio: 1;
-  opacity: 0.66;
+  opacity: 0.8;
   filter: saturate(0.9) contrast(1.06);
-  mask-image: radial-gradient(circle at center, black 34%, rgba(0, 0, 0, 0.84) 52%, transparent 77%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 23%, black 46%, black 100%);
   transform: translateY(-50%);
 }
 
@@ -2040,7 +2045,7 @@ main {
 .ecosystem-art-pair {
   display: block;
   width: min(54vw, 610px);
-  mask-image: radial-gradient(ellipse at center, black 30%, rgba(0, 0, 0, 0.88) 54%, transparent 80%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 18%, black 38%, black 100%);
 }
 
 .ecosystem-art-pair img {
@@ -2322,8 +2327,8 @@ main {
 
 @media (max-width: 680px) {
   .origin-proof-image {
-    width: 72%;
-    opacity: 0.2;
+    width: 84%;
+    opacity: 0.38;
   }
 
   .origin-story:first-child > p:not(.origin-eyebrow) {
@@ -2379,14 +2384,14 @@ main {
   }
 
   .ecosystem-art {
-    right: -38%;
+    right: -24%;
     left: auto;
-    width: min(112vw, 470px);
-    opacity: 0.4;
+    width: min(104vw, 470px);
+    opacity: 0.46;
   }
 
   .ecosystem-art-pair {
-    right: -55%;
+    right: -42%;
     width: min(150vw, 610px);
   }
 

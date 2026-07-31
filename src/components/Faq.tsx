@@ -5,7 +5,7 @@ const questions = [
   {
     question: "What is GameCoin?",
     answer:
-      "GameCoin is an independent community token on Robinhood Chain. It takes its name and cultural starting point from GameStop's historical Game Coin promotion, then applies that idea to an onchain GAMECOIN/GME market and holder-reward loop.",
+      "GameCoin is an independent community token on Robinhood Chain. Its cultural lineage begins with the 2021 GameStop saga and GameStop's historical Game Coin promotion, then carries that player-driven market energy into an onchain GAMECOIN/GME market and holder-reward loop.",
   },
   {
     question: "Is this an official GameStop token?",

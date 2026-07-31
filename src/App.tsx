@@ -141,13 +141,12 @@ function OriginStory() {
             src="/assets/tweet proof side vertical banner.png"
             alt="Archived GameStop Game Coin promotional post"
           />
-          <span className="origin-year">2021</span>
-          <p className="origin-eyebrow">GAMESTOP / GAME COIN</p>
-          <h3>The original signal.</h3>
+          <p className="origin-eyebrow">THE GAMESTOP SAGA / 2021</p>
+          <h3>The saga came first.</h3>
           <p>
-            In 2021, GameStop publicly promoted its Game Coin rewards concept. That post became
-            part of the same internet-market era that turned players, traders, and online
-            communities into a shared cultural force.
+            In 2021, the GameStop saga turned retail traders, players, and internet communities
+            into a market force. GameStop's later Game Coin promotion became another memorable
+            signal from that era and the cultural starting point for this independent project.
           </p>
           <a
             className="source-link"
@@ -242,9 +241,9 @@ function Mechanics() {
           <span className="section-index">GAMECOIN IDENTITY</span>
           <h2>The market is live.<br />Every holder is a player.</h2>
           <p>
-            The 2021 idea was a reward for players. This independent onchain version keeps the
-            player-first energy and turns market participation into a transparent reward loop
-            denominated in tokenized GME.
+            The GameStop saga showed what can happen when players become market participants.
+            This independent onchain version carries that community energy into a transparent
+            reward loop denominated in tokenized GME.
           </p>
           <p>
             Built for Robinhood Chain and launched through Flap, GAMECOIN is a community experiment - not
