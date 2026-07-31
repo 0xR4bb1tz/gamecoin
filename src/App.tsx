@@ -182,9 +182,12 @@ function OriginStory() {
       </div>
 
       <div className="origin-feature">
-        <figure>
-          <img src={projectConfig.media.originCampaign} alt="GameCoin city campaign artwork" />
-        </figure>
+        <img
+          className="origin-feature-art"
+          src={projectConfig.media.originCampaign}
+          alt=""
+          aria-hidden="true"
+        />
         <div>
           <span>FROM A RETAIL REWARD TO AN ONCHAIN MARKET</span>
           <h3>Power to the players,<br />rebuilt for the chain.</h3>
@@ -257,14 +260,10 @@ function Mechanics() {
       </div>
 
       <div className="ecosystem-stories">
-        <article className="ecosystem-story ecosystem-story-wide">
-          <div className="ecosystem-art-pair">
-            <figure>
-              <img src="/assets/robinhoodchaincoin banner.png" alt="Robinhood Chain artwork" />
-            </figure>
-            <figure className="is-round">
-              <img src="/assets/vlad tenev banner.png" alt="Vlad Tenev editorial artwork" />
-            </figure>
+        <article className="ecosystem-story">
+          <div className="ecosystem-art ecosystem-art-pair" aria-hidden="true">
+            <img src="/assets/robinhoodchaincoin banner.png" alt="" />
+            <img src="/assets/vlad tenev banner.png" alt="" />
           </div>
           <div className="ecosystem-copy">
             <span>2026 / THE ONCHAIN ARENA</span>
@@ -277,10 +276,10 @@ function Mechanics() {
           </div>
         </article>
 
-        <article className="ecosystem-story">
-          <figure className="is-round">
-            <img src="/assets/flap reference banner flap logo against a backdrop.png" alt="Flap launch platform artwork" />
-          </figure>
+        <article className="ecosystem-story is-art-left">
+          <div className="ecosystem-art" aria-hidden="true">
+            <img src="/assets/flap reference banner flap logo against a backdrop.png" alt="" />
+          </div>
           <div className="ecosystem-copy">
             <span>LAUNCH INFRASTRUCTURE</span>
             <h3>Launched through Flap.</h3>
@@ -292,9 +291,9 @@ function Mechanics() {
         </article>
 
         <article className="ecosystem-story">
-          <figure>
-            <img src="/assets/roaring kitty i like the stock banner.png" alt="GameStop market-culture artwork" />
-          </figure>
+          <div className="ecosystem-art" aria-hidden="true">
+            <img src="/assets/roaring kitty i like the stock banner.png" alt="" />
+          </div>
           <div className="ecosystem-copy">
             <span>THE COMMUNITY LINEAGE</span>
             <h3>Players became market participants.</h3>
