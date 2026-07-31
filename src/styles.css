@@ -2344,13 +2344,13 @@ main {
 
 @media (max-width: 680px) {
   .origin-proof-image {
-    top: auto;
-    right: 10px;
-    bottom: 10px;
-    width: min(62%, 220px);
+    inset: 0;
+    width: auto;
     height: auto;
-    opacity: 0.42;
-    object-fit: contain;
+    opacity: 0.32;
+    object-fit: cover;
+    object-position: right center;
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.38) 34%, black 68%, black 100%);
   }
 
   .origin-story:first-child > p:not(.origin-eyebrow) {
