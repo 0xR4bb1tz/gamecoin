@@ -260,9 +260,8 @@ function Mechanics() {
 
       <div className="ecosystem-stories">
         <article className="ecosystem-story">
-          <div className="ecosystem-art ecosystem-art-pair" aria-hidden="true">
+          <div className="ecosystem-art" aria-hidden="true">
             <img src="/assets/robinhoodchaincoin banner.png" alt="" />
-            <img src="/assets/vlad tenev banner.png" alt="" />
           </div>
           <div className="ecosystem-copy">
             <span>2026 / THE ONCHAIN ARENA</span>

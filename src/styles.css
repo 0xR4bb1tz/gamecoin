@@ -1453,10 +1453,10 @@ main {
   right: 0;
   width: 54%;
   height: 100%;
-  opacity: 0.66;
+  opacity: 0.58;
   object-fit: cover;
   object-position: center;
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 24%, black 48%, black 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.34) 22%, black 46%, black 100%);
 }
 
 .origin-story:first-child > p:not(.origin-eyebrow) {
