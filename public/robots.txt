@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gamecoin.example/sitemap.xml
