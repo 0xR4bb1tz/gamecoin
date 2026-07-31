@@ -2343,6 +2343,15 @@ main {
 }
 
 @media (max-width: 680px) {
+  .hero-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
   .origin-proof-image {
     inset: 0;
     width: auto;
@@ -2742,14 +2751,6 @@ main {
     width: 40px;
     padding: 0;
     font-size: 0;
-  }
-
-  .hero-actions {
-    display: grid;
-  }
-
-  .button {
-    width: 100%;
   }
 
   .visual-readout span {
