@@ -2327,8 +2327,13 @@ main {
 
 @media (max-width: 680px) {
   .origin-proof-image {
-    width: 84%;
-    opacity: 0.38;
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+    width: min(62%, 220px);
+    height: auto;
+    opacity: 0.42;
+    object-fit: contain;
   }
 
   .origin-story:first-child > p:not(.origin-eyebrow) {
@@ -2341,9 +2346,12 @@ main {
   }
 
   .direct-art {
-    right: -38%;
-    width: min(112vw, 470px);
-    opacity: 0.42;
+    top: auto;
+    right: 14px;
+    bottom: 14px;
+    width: min(72vw, 330px);
+    opacity: 0.34;
+    transform: none;
   }
 
   .direct-copy {
@@ -2384,15 +2392,19 @@ main {
   }
 
   .ecosystem-art {
-    right: -24%;
+    top: auto;
+    right: 14px;
+    bottom: 14px;
     left: auto;
-    width: min(104vw, 470px);
-    opacity: 0.46;
+    width: min(74vw, 335px);
+    opacity: 0.34;
+    transform: none;
   }
 
   .ecosystem-art-pair {
-    right: -42%;
-    width: min(150vw, 610px);
+    right: 8px;
+    bottom: 8px;
+    width: min(82vw, 370px);
   }
 
   .ecosystem-copy {
@@ -2459,9 +2471,12 @@ main {
   }
 
   .origin-feature-art {
-    right: -38%;
-    width: min(112vw, 470px);
-    opacity: 0.46;
+    top: auto;
+    right: 14px;
+    bottom: 14px;
+    width: min(74vw, 335px);
+    opacity: 0.38;
+    transform: none;
   }
 
   .origin-feature > div {
