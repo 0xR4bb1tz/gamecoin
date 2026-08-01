@@ -115,7 +115,7 @@ export const projectConfig: ProjectConfig = {
       "/assets/gamecoin name and logo on a skyscraper epic.png",
   },
   socials: {
-    x: env.VITE_X_URL || "",
+    x: env.VITE_X_URL || "https://x.com/gamecoinrh",
     telegram: env.VITE_TELEGRAM_URL || "",
     discord: env.VITE_DISCORD_URL || "",
   },

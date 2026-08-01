@@ -216,6 +216,24 @@ a[href] {
   box-shadow: 0 0 12px rgba(0, 200, 5, 0.7);
 }
 
+.header-social {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.header-social:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+  background: var(--lime-soft);
+}
+
 .button {
   display: inline-flex;
   align-items: center;

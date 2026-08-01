@@ -44,6 +44,15 @@ export function Nav() {
           {projectConfig.network.name}
         </span>
         <a
+          className="header-social"
+          href={projectConfig.socials.x}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Follow GameCoin on X"
+        >
+          <Icon name="xBrand" size={17} />
+        </a>
+        <a
           className={projectConfig.launch.flapUrl ? "button button-small" : "button button-small is-disabled"}
           href={projectConfig.launch.flapUrl || undefined}
           aria-disabled={!projectConfig.launch.flapUrl}

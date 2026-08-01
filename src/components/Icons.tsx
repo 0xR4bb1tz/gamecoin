@@ -10,7 +10,8 @@ interface IconProps {
     | "shield"
     | "spark"
     | "wallet"
-    | "x";
+    | "x"
+    | "xBrand";
   size?: number;
 }
 
@@ -47,6 +48,13 @@ export function Icon({ name, size = 18 }: IconProps) {
       </>
     ),
     x: <path d="m6 6 12 12M18 6 6 18" />,
+    xBrand: (
+      <path
+        d="M18.901 2H21.98L15.253 9.686L23.166 22H16.972L12.121 14.544L5.596 22H2.515L9.711 13.776L2.121 2H8.472L12.857 8.815L18.901 2ZM17.821 20.163H19.527L7.545 3.74H5.714L17.821 20.163Z"
+        fill="currentColor"
+        stroke="none"
+      />
+    ),
   };
 
   return (
