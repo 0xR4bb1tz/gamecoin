@@ -63,7 +63,14 @@ function addressEnv(value: string | undefined): Address {
   }
 }
 
-const gameAddress = addressEnv(env.VITE_GAMECOIN_ADDRESS || env.VITE_GAME_ADDRESS);
+const DEFAULT_GAMECOIN_ADDRESS = "0xb0baf0a19da434de5d40d91d3264978cc1997777";
+const DEFAULT_GME_ADDRESS = getAddress(
+  "0x1b0E319c6A659F002271B69dB8A7df2F911c153E",
+);
+
+const gameAddress =
+  addressEnv(env.VITE_GAMECOIN_ADDRESS || env.VITE_GAME_ADDRESS) ||
+  addressEnv(DEFAULT_GAMECOIN_ADDRESS);
 const poolAddress = addressEnv(env.VITE_POOL_ADDRESS);
 
 export const projectConfig: ProjectConfig = {
@@ -74,7 +81,7 @@ export const projectConfig: ProjectConfig = {
     quoteSymbol: "GME",
     quoteAddress:
       addressEnv(env.VITE_GME_ADDRESS) ||
-      "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+      DEFAULT_GME_ADDRESS,
     poolAddress,
     dividendDistributorAddress: addressEnv(env.VITE_DIVIDEND_DISTRIBUTOR_ADDRESS),
   },
